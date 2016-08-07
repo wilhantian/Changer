@@ -54,6 +54,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Changer\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -78,10 +79,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\Framework\Base\BaseObject.cpp" />
+    <ClCompile Include="..\src\Framework\Base\Logger.cpp" />
+    <ClCompile Include="..\src\Framework\GameState\GameState.cpp" />
+    <ClCompile Include="..\src\Framework\GameState\GameStateManager.cpp" />
+    <ClCompile Include="..\src\Framework\Game\Game.cpp" />
+    <ClCompile Include="..\src\Framework\Math\Rect.cpp" />
+    <ClCompile Include="..\src\Framework\Math\Size.cpp" />
+    <ClCompile Include="..\src\Framework\Math\Vector.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\Framework\Base\BaseObject.h" />
+    <ClInclude Include="..\src\Framework\Base\Logger.h" />
+    <ClInclude Include="..\src\Framework\Base\shared_ptr.hpp" />
+    <ClInclude Include="..\src\Framework\Base\unique_ptr.hpp" />
+    <ClInclude Include="..\src\Framework\GameState\GameState.h" />
+    <ClInclude Include="..\src\Framework\GameState\GameStateManager.h" />
+    <ClInclude Include="..\src\Framework\Game\Game.h" />
+    <ClInclude Include="..\src\Framework\Math\Rect.h" />
+    <ClInclude Include="..\src\Framework\Math\Size.h" />
+    <ClInclude Include="..\src\Framework\Math\Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

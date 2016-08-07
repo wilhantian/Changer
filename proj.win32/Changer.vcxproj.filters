@@ -1,25 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="源文件">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="src">
+      <UniqueIdentifier>{d32f49a1-4945-4fad-809b-a53172b22742}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    <Filter Include="src\Framework">
+      <UniqueIdentifier>{c1368a8f-7d41-448d-bde0-76fc0f64b727}</UniqueIdentifier>
     </Filter>
-    <Filter Include="资源文件">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="src\Framework\Base">
+      <UniqueIdentifier>{2eb82e8f-f3f0-4fbc-a496-5fa5d39e80e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Framework\GameState">
+      <UniqueIdentifier>{ecad10bb-0948-4e4c-a362-285e765679ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Framework\Game">
+      <UniqueIdentifier>{56b7cbd8-039b-4dab-94f1-45fb2927bfca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Framework\Math">
+      <UniqueIdentifier>{3c7b1741-dc02-49ed-b7b1-ddc3e0859430}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="..\src\Framework\Base\BaseObject.cpp">
+      <Filter>src\Framework\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Framework\Base\Logger.cpp">
+      <Filter>src\Framework\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Framework\GameState\GameState.cpp">
+      <Filter>src\Framework\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Framework\Game\Game.cpp">
+      <Filter>src\Framework\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Framework\GameState\GameStateManager.cpp">
+      <Filter>src\Framework\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Framework\Math\Vector.cpp">
+      <Filter>src\Framework\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Framework\Math\Rect.cpp">
+      <Filter>src\Framework\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Framework\Math\Size.cpp">
+      <Filter>src\Framework\Math</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\Framework\Base\BaseObject.h">
+      <Filter>src\Framework\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Framework\Base\Logger.h">
+      <Filter>src\Framework\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Framework\GameState\GameState.h">
+      <Filter>src\Framework\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Framework\Base\unique_ptr.hpp">
+      <Filter>src\Framework\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Framework\Base\shared_ptr.hpp">
+      <Filter>src\Framework\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Framework\Game\Game.h">
+      <Filter>src\Framework\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Framework\GameState\GameStateManager.h">
+      <Filter>src\Framework\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Framework\Math\Vector.h">
+      <Filter>src\Framework\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Framework\Math\Rect.h">
+      <Filter>src\Framework\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Framework\Math\Size.h">
+      <Filter>src\Framework\Math</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
