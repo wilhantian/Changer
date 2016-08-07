@@ -27,3 +27,6 @@
 *.exe
 *.out
 *.app
+
+/proj.win32/Debug
+/proj.win32/packages
