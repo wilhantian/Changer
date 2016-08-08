@@ -19,9 +19,20 @@ Game* Game::getInstance()
 	return _instance;
 }
 
+void Game::destoryInstance()
+{
+    if(_instance)
+        delete _instance;
+}
+
 void Game::run()
 {
 
+}
+
+void Game::stop()
+{
+    
 }
 
 Game* Game::_instance = nullptr;
