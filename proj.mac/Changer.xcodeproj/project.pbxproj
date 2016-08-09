@@ -29,6 +29,7 @@
 		876919451D59A293009918CB /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 876919391D59A292009918CB /* Rect.cpp */; settings = {ASSET_TAGS = (); }; };
 		876919461D59A293009918CB /* Size.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8769193B1D59A293009918CB /* Size.cpp */; settings = {ASSET_TAGS = (); }; };
 		876919471D59A293009918CB /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8769193D1D59A293009918CB /* Vector.cpp */; settings = {ASSET_TAGS = (); }; };
+		8769194B1D59C11C009918CB /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 876919491D59C11C009918CB /* test.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,6 +80,8 @@
 		8769193C1D59A293009918CB /* Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Size.h; sourceTree = "<group>"; };
 		8769193D1D59A293009918CB /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
 		8769193E1D59A293009918CB /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		876919491D59C11C009918CB /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = test.cpp; path = GameLogic/test.cpp; sourceTree = "<group>"; };
+		8769194A1D59C11C009918CB /* test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = test.hpp; path = GameLogic/test.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,7 @@
 		876919231D59A292009918CB /* src */ = {
 			isa = PBXGroup;
 			children = (
+				876919481D59C0D4009918CB /* GameLogic */,
 				876919241D59A292009918CB /* Framework */,
 			);
 			name = src;
@@ -218,6 +222,15 @@
 			path = Math;
 			sourceTree = "<group>";
 		};
+		876919481D59C0D4009918CB /* GameLogic */ = {
+			isa = PBXGroup;
+			children = (
+				876919491D59C11C009918CB /* test.cpp */,
+				8769194A1D59C11C009918CB /* test.hpp */,
+			);
+			name = GameLogic;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -279,6 +292,7 @@
 				876919471D59A293009918CB /* Vector.cpp in Sources */,
 				876919441D59A293009918CB /* GameStateManager.cpp in Sources */,
 				876919431D59A293009918CB /* GameState.cpp in Sources */,
+				8769194B1D59C11C009918CB /* test.cpp in Sources */,
 				876919411D59A293009918CB /* EntityFu.cpp in Sources */,
 				876919401D59A293009918CB /* Logger.cpp in Sources */,
 				8769193F1D59A293009918CB /* BaseObject.cpp in Sources */,

@@ -40,7 +40,7 @@ static Entity::Component*** components = nullptr;
 static vector<Eid>* componentEids = nullptr;
 
 /// define numCids
-Cid Entity::Component::numCids = 0;
+//Cid Entity::Component::numCids = 0;
 
 static void log(Cid cid)
 {

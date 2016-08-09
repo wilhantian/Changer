@@ -116,7 +116,6 @@ namespace Entity
 		Entity::addComponents(eid, args...);
 		return eid;
 	}
-
 };
 
 ///
@@ -133,8 +132,10 @@ struct Entity::Component
 	virtual bool empty() const = 0;
 	virtual bool full() const;
 	static Cid numCids;
+    
 	// static Cid cid;
 };
+
 
 ///
 /// Convenience macro to get a reference to a component or else run some code.
