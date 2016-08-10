@@ -80,6 +80,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Framework\Base\BaseObject.cpp" />
+    <ClCompile Include="..\src\Framework\Base\BaseObjectManager.cpp" />
     <ClCompile Include="..\src\Framework\Base\Logger.cpp" />
     <ClCompile Include="..\src\Framework\GameState\GameState.cpp" />
     <ClCompile Include="..\src\Framework\GameState\GameStateManager.cpp" />
@@ -94,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\Framework\Base\BaseObject.h" />
+    <ClInclude Include="..\src\Framework\Base\BaseObjectManager.h" />
     <ClInclude Include="..\src\Framework\Base\Logger.h" />
     <ClInclude Include="..\src\Framework\Base\shared_ptr.hpp" />
     <ClInclude Include="..\src\Framework\Base\unique_ptr.hpp" />

@@ -12,8 +12,17 @@ public:
 public:
 	void run();
     void stop();
+
+protected:
+	bool _isNeedUpdate();
+
 protected:
 	static Game* _instance;
+	float _nowTime;
+	float _gameDelay;
+	float _curDelay;
+	float _lastUpdateTime;
+	bool _isRunning;
 };
 
 #endif

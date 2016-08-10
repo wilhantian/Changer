@@ -6,7 +6,11 @@ GameState::GameState()
 
 GameState::~GameState()
 {
-	
+}
+
+bool GameState::init()
+{
+	return true;
 }
 
 void GameState::onEnter()
@@ -28,3 +32,9 @@ void GameState::draw()
 {
 
 }
+
+void GameState::handleEvent()
+{
+
+}
+
