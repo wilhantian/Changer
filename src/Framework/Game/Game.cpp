@@ -38,16 +38,29 @@ void Game::destoryInstance()
 
 void Game::run()
 {
-	al_init();
+	if(!al_init())
+    {
+        Logger::error("al init error");
+        return;
+    }
 
+    if(!(_display = al_create_display(800, 600)))
+    {
+        Logger::error("al create display error");
+        return;
+    }
+    
 	while (_isRunning)
 	{	
 		if (_isNeedUpdate())
 		{
 			GameStateManager::getInstance()->handleEvent();
 			GameStateManager::getInstance()->update(_curDelay);
-			GameStateManager::getInstance()->draw();
 
+            al_clear_to_color(al_map_rgb_f(0, 0, 0));
+			GameStateManager::getInstance()->draw();
+            al_flip_display();
+            
 			BaseObjectManager::getInstance()->clear();
 		}
 	}

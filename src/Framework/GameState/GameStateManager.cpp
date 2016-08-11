@@ -1,5 +1,6 @@
 #include "GameStateManager.h"
 #include "GameState.h"
+#include "Framework/Base/Logger.h"
 
 GameStateManager::GameStateManager():
 _curGameState(nullptr)
@@ -31,26 +32,61 @@ void GameStateManager::destory()
 
 void GameStateManager::switchTo(GameState* gameState)
 {
-	if (!gameState || _curGameState == gameState)
-		return;
-
-	if (_curGameState)
-		_curGameState->onExit();
-	
-	_curGameState = gameState;
-	
-	if (_curGameState)
-		_curGameState->onEnter();
+    pop();
+    push(gameState);
 }
 
 void GameStateManager::push(GameState* gameState)
 {
-
+    if(!gameState)
+    {
+        Logger::error("push game state error, the state is null");
+        return;
+    }
+    
+    if (_stateList.size() > 0)
+    {
+        GameState* lastState = _stateList.back();
+        
+        if (lastState)
+        {
+            lastState->onExit();
+        }
+    }
+    
+    _curGameState = gameState;
+    gameState->retain();
+    gameState->onEnter();
+    _stateList.push_back(gameState);
 }
 
 void GameStateManager::pop()
 {
-
+    if (_stateList.size() == 0) {
+        return;
+    }
+    
+    GameState* state = _stateList.back();
+    if (state)
+    {
+        state->onExit();
+        state->release();
+    }
+    
+    _stateList.pop_back();
+    
+    state = _stateList.back();
+    
+    if(state)
+    {
+        _curGameState = state;
+        state->onEnter();
+    }
+    else
+    {
+        _curGameState = nullptr;
+    }
+    
 }
 
 void GameStateManager::update(float dt)
@@ -75,6 +111,11 @@ void GameStateManager::handleEvent()
 	{
 		_curGameState->handleEvent();
 	}
+}
+
+GameState* GameStateManager::getCurGameState()
+{
+    return _curGameState;
 }
 
 GameStateManager* GameStateManager::_instance = nullptr;

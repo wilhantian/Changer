@@ -1,6 +1,11 @@
 #include <allegro5/allegro.h>
 #include "Framework/ECS/EntityFu.h"
+#include "Framework/Game/Game.h"
 #include <iostream>
+
+#include "Framework/GameState/GameStateManager.h"
+#include "Framework/GameState/GameState.h"
+#include "Framework/Base/Logger.h"
 
 #ifdef _WIN32
 #include <windows.h>
@@ -79,8 +84,31 @@ struct HealthSystem : System
     }
 };
 
+class MyState : public GameState
+{
+public:
+    CREATE_FUNC(MyState);
+    virtual bool init()
+    {
+        return true;
+    }
+    
+public:
+    virtual void update(float dt)
+    {
+        Logger::debug("%f", dt);
+    }
+    
+    virtual void draw()
+    {
+       
+    }
+};
+
 int main(int argc, char **argv)
 {
+    GameStateManager::getInstance()->push(MyState::create());
+    Game::getInstance()->run();
     Entity::create(new HealthComponent(100, 100));
     Entity::create(new HealthComponent(7, 7));
     

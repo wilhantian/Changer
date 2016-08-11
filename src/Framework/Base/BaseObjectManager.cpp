@@ -39,7 +39,7 @@ void BaseObjectManager::add(BaseObject* obj)
 
 void BaseObjectManager::clear()
 {
-	int size = _objects.size();
+	unsigned long size = _objects.size();
 	for (int i = 0; i < size; i++)
 	{
 		BaseObject* obj = _objects.front();

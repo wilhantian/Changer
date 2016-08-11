@@ -12,6 +12,7 @@ public:
 	~GameStateManager();
 	static GameStateManager* getInstance();
 	static void destory();
+    
 public:
 	void switchTo(GameState* gameState);
 	void push(GameState* gameState);
@@ -20,6 +21,8 @@ public:
 	void update(float dt);
 	void draw();
 	void handleEvent();
+    
+    GameState* getCurGameState();
 protected:
 	static GameStateManager* _instance;
 	GameState* _curGameState;

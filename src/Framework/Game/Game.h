@@ -1,6 +1,8 @@
 #ifndef _GAME_H_
 #define _GAME_H_
 
+class ALLEGRO_DISPLAY;
+
 class Game
 {
 public:
@@ -12,7 +14,7 @@ public:
 public:
 	void run();
     void stop();
-
+    
 protected:
 	bool _isNeedUpdate();
 
@@ -23,6 +25,7 @@ protected:
 	float _curDelay;
 	float _lastUpdateTime;
 	bool _isRunning;
+    ALLEGRO_DISPLAY* _display;
 };
 
 #endif
