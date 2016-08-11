@@ -46,6 +46,9 @@
     <ClCompile Include="..\src\Framework\Math\Size.cpp">
       <Filter>src\Framework\Math</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Framework\Base\BaseObjectManager.cpp">
+      <Filter>src\Framework\Base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -80,6 +83,9 @@
     </ClInclude>
     <ClInclude Include="..\src\Framework\Math\Size.h">
       <Filter>src\Framework\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Framework\Base\BaseObjectManager.h">
+      <Filter>src\Framework\Base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

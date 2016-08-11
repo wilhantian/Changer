@@ -1,21 +1,22 @@
 #ifndef _GAME_STATE_H_
 #define _GAME_STATE_H_
 
-typedef unsigned int GameStateID;
+#include "Framework/Base/BaseObject.h"
 
-class GameState
+class GameState : public BaseObject
 {
 public:
 	GameState();
 	virtual ~GameState();
 
+	CREATE_FUNC(GameState);
+	virtual bool init();
 public:
-	virtual GameStateID getGameStateID() = 0;
-
 	virtual void onEnter();
 	virtual void onExit();
 	virtual void update(float dt);
 	virtual void draw();
+	virtual void handleEvent();
 };
 
 #endif
