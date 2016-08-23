@@ -19,6 +19,9 @@
     <Filter Include="src\Framework\Math">
       <UniqueIdentifier>{3c7b1741-dc02-49ed-b7b1-ddc3e0859430}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Framework\ECS">
+      <UniqueIdentifier>{17ad43eb-eac3-4f33-8bb3-5a7fc6b5c515}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -48,6 +51,9 @@
     </ClCompile>
     <ClCompile Include="..\src\Framework\Base\BaseObjectManager.cpp">
       <Filter>src\Framework\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Framework\ECS\EntityFu.cpp">
+      <Filter>src\Framework\ECS</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +92,9 @@
     </ClInclude>
     <ClInclude Include="..\src\Framework\Base\BaseObjectManager.h">
       <Filter>src\Framework\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Framework\ECS\EntityFu.h">
+      <Filter>src\Framework\ECS</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

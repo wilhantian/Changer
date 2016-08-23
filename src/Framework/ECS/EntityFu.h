@@ -13,6 +13,9 @@ typedef unsigned Eid;
 /// A `Cid` is a component ID.
 typedef unsigned Cid;
 
+/// A `Sid` is a system ID.
+typedef unsigned Sid;
+
 namespace Entity
 {
 	struct Component;
@@ -156,10 +159,16 @@ struct Entity::Component
 class System
 {
 	public:
+		Sid sid;
 		struct Ent;
-	
+		
 		static void tick(double fixedDelta);
 		static void animate(double delta, double tickPercent);
+
+		static void registerSystem(System system, Sid sid = 0);
+		static void unregisterSystem(Sid sid);
+
+	private:
+		static std::vector<System> __systems;
+
 };
-
-

@@ -283,4 +283,29 @@ void System::animate(double delta, double tickPercent)
 {
 }
 
+void System::registerSystem(System system, Sid sid/*=0*/)
+{
+	system.sid = sid;
+	__systems.push_back(system);
+ 	std::sort(__systems.begin(), __systems.end(), [=](System a, System b)
+	{
+ 		return a.sid > b.sid;
+ 	});
+}
 
+void System::unregisterSystem(Sid)
+{
+	for (vector<System>::iterator it = __systems.begin(); it != __systems.end();)
+	{
+		if ((*it).sid == 1)
+		{
+			__systems.erase(it++);
+		}
+		else
+		{
+			it++;
+		}
+	}
+}
+
+std::vector<System> System::__systems;
