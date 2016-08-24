@@ -1,6 +1,6 @@
 #include "BaseObject.h"
 #include "BaseObjectManager.h"
-#include "Logger.h"
+#include "Core/Logger/Logger.h"
 
 BaseObject::BaseObject():
 _refCount(1)

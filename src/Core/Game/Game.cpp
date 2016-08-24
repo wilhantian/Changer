@@ -1,6 +1,7 @@
 #include "Game.h"
 
 #include <allegro5/allegro.h>
+#include <allegro5/allegro_image.h>
 #include "Core/Logger/Logger.h"
 #include "Core/Base/BaseObjectManager.h"
 #include "Core/GameState/GameState.h"
@@ -38,7 +39,7 @@ void Game::destoryInstance()
 
 void Game::run()
 {
-	if(!al_init())
+	if (!al_init() || !al_init_image_addon())
     {
         Logger::error("al init error");
         return;
@@ -55,9 +56,8 @@ void Game::run()
 		if (_isNeedUpdate())
 		{
 			GameStateManager::getInstance()->handleEvent();
+			al_clear_to_color(al_map_rgb_f(0, 0, 0));
 			GameStateManager::getInstance()->update(_curDelay);
-
-            al_clear_to_color(al_map_rgb_f(0, 0, 0));
 			GameStateManager::getInstance()->draw();
             al_flip_display();
             
@@ -65,6 +65,7 @@ void Game::run()
 		}
 	}
 
+	al_destroy_display(_display);
 }
 
 void Game::stop()

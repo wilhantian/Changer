@@ -43,6 +43,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <Allegro_AddonImage>true</Allegro_AddonImage>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -79,34 +80,38 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\Framework\Base\BaseObject.cpp" />
-    <ClCompile Include="..\src\Framework\Base\BaseObjectManager.cpp" />
-    <ClCompile Include="..\src\Framework\Base\Logger.cpp" />
-    <ClCompile Include="..\src\Framework\ECS\EntityFu.cpp" />
-    <ClCompile Include="..\src\Framework\GameState\GameState.cpp" />
-    <ClCompile Include="..\src\Framework\GameState\GameStateManager.cpp" />
-    <ClCompile Include="..\src\Framework\Game\Game.cpp" />
-    <ClCompile Include="..\src\Framework\Math\Rect.cpp" />
-    <ClCompile Include="..\src\Framework\Math\Size.cpp" />
-    <ClCompile Include="..\src\Framework\Math\Vector.cpp" />
+    <ClCompile Include="..\src\Core\Base\BaseObject.cpp" />
+    <ClCompile Include="..\src\Core\Base\BaseObjectManager.cpp" />
+    <ClCompile Include="..\src\Core\ECS\EntityFu.cpp" />
+    <ClCompile Include="..\src\Core\GameState\GameState.cpp" />
+    <ClCompile Include="..\src\Core\GameState\GameStateManager.cpp" />
+    <ClCompile Include="..\src\Core\Game\Game.cpp" />
+    <ClCompile Include="..\src\Core\Logger\Logger.cpp" />
+    <ClCompile Include="..\src\Core\Math\Rect.cpp" />
+    <ClCompile Include="..\src\Core\Math\Size.cpp" />
+    <ClCompile Include="..\src\Core\Math\Vector.cpp" />
+    <ClCompile Include="..\src\Game\Component\PositionComp.cpp" />
+    <ClCompile Include="..\src\Game\GameState\TestState.cpp" />
+    <ClCompile Include="..\src\Game\System\System.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\Framework\Base\BaseObject.h" />
-    <ClInclude Include="..\src\Framework\Base\BaseObjectManager.h" />
-    <ClInclude Include="..\src\Framework\Base\Logger.h" />
-    <ClInclude Include="..\src\Framework\Base\shared_ptr.hpp" />
-    <ClInclude Include="..\src\Framework\Base\unique_ptr.hpp" />
-    <ClInclude Include="..\src\Framework\ECS\EntityFu.h" />
-    <ClInclude Include="..\src\Framework\GameState\GameState.h" />
-    <ClInclude Include="..\src\Framework\GameState\GameStateManager.h" />
-    <ClInclude Include="..\src\Framework\Game\Game.h" />
-    <ClInclude Include="..\src\Framework\Math\Rect.h" />
-    <ClInclude Include="..\src\Framework\Math\Size.h" />
-    <ClInclude Include="..\src\Framework\Math\Vector.h" />
+    <ClInclude Include="..\src\Core\Base\BaseObject.h" />
+    <ClInclude Include="..\src\Core\Base\BaseObjectManager.h" />
+    <ClInclude Include="..\src\Core\ECS\EntityFu.h" />
+    <ClInclude Include="..\src\Core\GameState\GameState.h" />
+    <ClInclude Include="..\src\Core\GameState\GameStateManager.h" />
+    <ClInclude Include="..\src\Core\Game\Game.h" />
+    <ClInclude Include="..\src\Core\Logger\Logger.h" />
+    <ClInclude Include="..\src\Core\Math\Rect.h" />
+    <ClInclude Include="..\src\Core\Math\Size.h" />
+    <ClInclude Include="..\src\Core\Math\Vector.h" />
+    <ClInclude Include="..\src\Game\Component\PositionComp.h" />
+    <ClInclude Include="..\src\Game\GameState\TestState.h" />
+    <ClInclude Include="..\src\Game\System\System.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

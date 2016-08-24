@@ -1,7 +1,7 @@
 #ifndef _GAME_H_
 #define _GAME_H_
 
-class ALLEGRO_DISPLAY;
+struct ALLEGRO_DISPLAY;
 
 class Game
 {

@@ -7,6 +7,8 @@
 //
 
 #include "TestState.h"
+#include "Game/Component/PositionComp.h"
+#include "Game/System/System.h"
 
 bool TestState::init()
 {
@@ -15,13 +17,15 @@ bool TestState::init()
     }
     
     // todo
+	Eid a = Entity::create(new PositionComp(20, 20), new SkinComp("E:/Changer/res/1.png"));
+	Eid b = Entity::create(new PositionComp(100, 100), new SkinComp("E:/Changer/res/2.jpg"));
     
     return true;
 }
 
 void TestState::update(float dt)
 {
-    
+	RenderSystem::tick(dt);
 }
 
 void TestState::draw()

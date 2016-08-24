@@ -159,7 +159,6 @@ struct Entity::Component
 class System
 {
 	public:
-		Sid sid;
 		struct Ent;
 		
 		static void tick(double fixedDelta);

@@ -10,6 +10,7 @@
 #define _TestState_h_
 
 #include <stdio.h>
+#include "Core/ECS/EntityFu.h"
 #include "Core/GameState/GameState.h"
 
 class TestState : public GameState

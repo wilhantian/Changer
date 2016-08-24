@@ -4,97 +4,127 @@
     <Filter Include="src">
       <UniqueIdentifier>{d32f49a1-4945-4fad-809b-a53172b22742}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Framework">
-      <UniqueIdentifier>{c1368a8f-7d41-448d-bde0-76fc0f64b727}</UniqueIdentifier>
+    <Filter Include="src\Core">
+      <UniqueIdentifier>{850e9bc6-3539-4258-b9e7-0fb77689e267}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Framework\Base">
-      <UniqueIdentifier>{2eb82e8f-f3f0-4fbc-a496-5fa5d39e80e8}</UniqueIdentifier>
+    <Filter Include="src\Game">
+      <UniqueIdentifier>{7e7c2c67-0a3c-47aa-9094-88bf95a5d875}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Framework\GameState">
-      <UniqueIdentifier>{ecad10bb-0948-4e4c-a362-285e765679ec}</UniqueIdentifier>
+    <Filter Include="src\Core\Base">
+      <UniqueIdentifier>{69242920-720c-4b1f-a5f2-868f0be4cfa3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Framework\Game">
-      <UniqueIdentifier>{56b7cbd8-039b-4dab-94f1-45fb2927bfca}</UniqueIdentifier>
+    <Filter Include="src\Core\ECS">
+      <UniqueIdentifier>{ea5f6977-752c-4019-b68f-0070aa7800ee}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Framework\Math">
-      <UniqueIdentifier>{3c7b1741-dc02-49ed-b7b1-ddc3e0859430}</UniqueIdentifier>
+    <Filter Include="src\Core\Game">
+      <UniqueIdentifier>{3d9c42d6-9b3a-4d58-acae-66cd0772e42f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Framework\ECS">
-      <UniqueIdentifier>{17ad43eb-eac3-4f33-8bb3-5a7fc6b5c515}</UniqueIdentifier>
+    <Filter Include="src\Core\GameState">
+      <UniqueIdentifier>{271e9703-3937-4b9b-9a52-3bd303e8b390}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Core\Logger">
+      <UniqueIdentifier>{d2f54051-18cc-42b9-98a1-1693b161eca4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Core\Math">
+      <UniqueIdentifier>{1e1f494e-d4c6-4805-963e-45ad1df4eb7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Game\Component">
+      <UniqueIdentifier>{0fcd0dcc-c0bb-4a4c-8a84-7834c6e04334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Game\GameState">
+      <UniqueIdentifier>{f1e3e772-2f51-4739-b8ac-cc9583c4ff4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Game\System">
+      <UniqueIdentifier>{9feb9709-9b3f-47b9-98c9-bdbc71f52924}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Game\Entity">
+      <UniqueIdentifier>{7788f81c-d798-49cd-b3bd-02b77fbe5687}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="..\src\Framework\Base\BaseObject.cpp">
-      <Filter>src\Framework\Base</Filter>
+    <ClCompile Include="..\src\Core\Base\BaseObjectManager.cpp">
+      <Filter>src\Core\Base</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Framework\Base\Logger.cpp">
-      <Filter>src\Framework\Base</Filter>
+    <ClCompile Include="..\src\Core\Base\BaseObject.cpp">
+      <Filter>src\Core\Base</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Framework\GameState\GameState.cpp">
-      <Filter>src\Framework\GameState</Filter>
+    <ClCompile Include="..\src\Core\ECS\EntityFu.cpp">
+      <Filter>src\Core\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Framework\Game\Game.cpp">
-      <Filter>src\Framework\Game</Filter>
+    <ClCompile Include="..\src\Core\Game\Game.cpp">
+      <Filter>src\Core\Game</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Framework\GameState\GameStateManager.cpp">
-      <Filter>src\Framework\GameState</Filter>
+    <ClCompile Include="..\src\Core\GameState\GameStateManager.cpp">
+      <Filter>src\Core\GameState</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Framework\Math\Vector.cpp">
-      <Filter>src\Framework\Math</Filter>
+    <ClCompile Include="..\src\Core\GameState\GameState.cpp">
+      <Filter>src\Core\GameState</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Framework\Math\Rect.cpp">
-      <Filter>src\Framework\Math</Filter>
+    <ClCompile Include="..\src\Core\Logger\Logger.cpp">
+      <Filter>src\Core\Logger</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Framework\Math\Size.cpp">
-      <Filter>src\Framework\Math</Filter>
+    <ClCompile Include="..\src\Core\Math\Rect.cpp">
+      <Filter>src\Core\Math</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Framework\Base\BaseObjectManager.cpp">
-      <Filter>src\Framework\Base</Filter>
+    <ClCompile Include="..\src\Core\Math\Size.cpp">
+      <Filter>src\Core\Math</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Framework\ECS\EntityFu.cpp">
-      <Filter>src\Framework\ECS</Filter>
+    <ClCompile Include="..\src\Core\Math\Vector.cpp">
+      <Filter>src\Core\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Game\Component\PositionComp.cpp">
+      <Filter>src\Game\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Game\GameState\TestState.cpp">
+      <Filter>src\Game\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Game\System\System.cpp">
+      <Filter>src\Game\System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\Framework\Base\BaseObject.h">
-      <Filter>src\Framework\Base</Filter>
+    <ClInclude Include="..\src\Core\Base\BaseObjectManager.h">
+      <Filter>src\Core\Base</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Framework\Base\Logger.h">
-      <Filter>src\Framework\Base</Filter>
+    <ClInclude Include="..\src\Core\Base\BaseObject.h">
+      <Filter>src\Core\Base</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Framework\GameState\GameState.h">
-      <Filter>src\Framework\GameState</Filter>
+    <ClInclude Include="..\src\Core\ECS\EntityFu.h">
+      <Filter>src\Core\ECS</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Framework\Base\unique_ptr.hpp">
-      <Filter>src\Framework\Base</Filter>
+    <ClInclude Include="..\src\Core\Game\Game.h">
+      <Filter>src\Core\Game</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Framework\Base\shared_ptr.hpp">
-      <Filter>src\Framework\Base</Filter>
+    <ClInclude Include="..\src\Core\GameState\GameStateManager.h">
+      <Filter>src\Core\GameState</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Framework\Game\Game.h">
-      <Filter>src\Framework\Game</Filter>
+    <ClInclude Include="..\src\Core\GameState\GameState.h">
+      <Filter>src\Core\GameState</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Framework\GameState\GameStateManager.h">
-      <Filter>src\Framework\GameState</Filter>
+    <ClInclude Include="..\src\Core\Logger\Logger.h">
+      <Filter>src\Core\Logger</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Framework\Math\Vector.h">
-      <Filter>src\Framework\Math</Filter>
+    <ClInclude Include="..\src\Core\Math\Vector.h">
+      <Filter>src\Core\Math</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Framework\Math\Rect.h">
-      <Filter>src\Framework\Math</Filter>
+    <ClInclude Include="..\src\Core\Math\Rect.h">
+      <Filter>src\Core\Math</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Framework\Math\Size.h">
-      <Filter>src\Framework\Math</Filter>
+    <ClInclude Include="..\src\Core\Math\Size.h">
+      <Filter>src\Core\Math</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Framework\Base\BaseObjectManager.h">
-      <Filter>src\Framework\Base</Filter>
+    <ClInclude Include="..\src\Game\Component\PositionComp.h">
+      <Filter>src\Game\Component</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Framework\ECS\EntityFu.h">
-      <Filter>src\Framework\ECS</Filter>
+    <ClInclude Include="..\src\Game\GameState\TestState.h">
+      <Filter>src\Game\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Game\System\System.h">
+      <Filter>src\Game\System</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

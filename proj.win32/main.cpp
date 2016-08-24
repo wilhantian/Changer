@@ -1,11 +1,15 @@
 #include <allegro5/allegro.h>
-#include "Framework/Game/Game.h"
-#include "Framework/ECS/EntityFu.h"
+#include "Core/Game/Game.h"
+#include "Core/GameState/GameState.h"
+#include "Core/GameState/GameStateManager.h"
+#include "Core/ECS/EntityFu.h"
+#include "Game/GameState/TestState.h"
 
-Cid Entity::Component::numCids = 0;
+/*Cid Entity::Component::numCids = 0;*/
 
 int main()
 {
+	GameStateManager::getInstance()->push(TestState::create());
 	Game::getInstance()->run();
 
 	return 0;
