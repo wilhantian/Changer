@@ -1,10 +1,10 @@
 #include "Game.h"
 
 #include <allegro5/allegro.h>
-#include "Framework/Base/Logger.h"
-#include "Framework/Base/BaseObjectManager.h"
-#include "Framework/GameState/GameState.h"
-#include "Framework/GameState/GameStateManager.h"
+#include "Core/Logger/Logger.h"
+#include "Core/Base/BaseObjectManager.h"
+#include "Core/GameState/GameState.h"
+#include "Core/GameState/GameStateManager.h"
 
 Game::Game():
 _isRunning(true),

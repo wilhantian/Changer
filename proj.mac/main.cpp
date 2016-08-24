@@ -1,11 +1,11 @@
 #include <allegro5/allegro.h>
-#include "Framework/ECS/EntityFu.h"
-#include "Framework/Game/Game.h"
+#include "Core/ECS/EntityFu.h"
+#include "Core/Game/Game.h"
 #include <iostream>
 
-#include "Framework/GameState/GameStateManager.h"
-#include "Framework/GameState/GameState.h"
-#include "Framework/Base/Logger.h"
+#include "Core/GameState/GameStateManager.h"
+#include "Core/GameState/GameState.h"
+#include "Core/Logger/Logger.h"
 
 #ifdef _WIN32
 #include <windows.h>
@@ -109,6 +109,7 @@ int main(int argc, char **argv)
 {
     GameStateManager::getInstance()->push(MyState::create());
     Game::getInstance()->run();
+    
     Entity::create(new HealthComponent(100, 100));
     Entity::create(new HealthComponent(7, 7));
     

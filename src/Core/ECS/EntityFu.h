@@ -164,11 +164,4 @@ class System
 		
 		static void tick(double fixedDelta);
 		static void animate(double delta, double tickPercent);
-
-		static void registerSystem(System system, Sid sid = 0);
-		static void unregisterSystem(Sid sid);
-
-	private:
-		static std::vector<System> __systems;
-
 };

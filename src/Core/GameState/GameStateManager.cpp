@@ -1,6 +1,6 @@
 #include "GameStateManager.h"
 #include "GameState.h"
-#include "Framework/Base/Logger.h"
+#include "Core/Logger/Logger.h"
 
 GameStateManager::GameStateManager():
 _curGameState(nullptr)

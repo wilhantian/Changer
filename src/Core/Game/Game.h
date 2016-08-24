@@ -24,7 +24,7 @@ protected:
 	float _gameDelay;
 	float _curDelay;
 	float _lastUpdateTime;
-	bool _isRunning;
+	bool  _isRunning;
     ALLEGRO_DISPLAY* _display;
 };
 

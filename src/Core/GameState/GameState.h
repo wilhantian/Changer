@@ -1,7 +1,7 @@
 #ifndef _GAME_STATE_H_
 #define _GAME_STATE_H_
 
-#include "Framework/Base/BaseObject.h"
+#include "Core/Base/BaseObject.h"
 
 class GameState : public BaseObject
 {
@@ -11,6 +11,7 @@ public:
 
 	CREATE_FUNC(GameState);
 	virtual bool init();
+    
 public:
 	virtual void onEnter();
 	virtual void onExit();
