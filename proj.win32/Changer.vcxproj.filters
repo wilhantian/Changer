@@ -40,6 +40,9 @@
     <Filter Include="src\Game\Entity">
       <UniqueIdentifier>{7788f81c-d798-49cd-b3bd-02b77fbe5687}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Core\Grapics">
+      <UniqueIdentifier>{1daa617c-60a6-45dc-9843-116bc4baff4a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -81,6 +84,9 @@
     </ClCompile>
     <ClCompile Include="..\src\Game\System\System.cpp">
       <Filter>src\Game\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Core\Grapics\Grapics.cpp">
+      <Filter>src\Core\Grapics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +131,9 @@
     </ClInclude>
     <ClInclude Include="..\src\Game\System\System.h">
       <Filter>src\Game\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Core\Grapics\Grapics.h">
+      <Filter>src\Core\Grapics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

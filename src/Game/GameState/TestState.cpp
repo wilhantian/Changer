@@ -20,6 +20,9 @@ bool TestState::init()
 	Eid a = Entity::create(new PositionComp(20, 20), new SkinComp("E:/Changer/res/1.png"));
 	Eid b = Entity::create(new PositionComp(100, 100), new SkinComp("E:/Changer/res/2.jpg"));
     
+	Entity::destroyNow(a);
+	//Entity::destroyNow(b);
+
     return true;
 }
 

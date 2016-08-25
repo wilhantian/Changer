@@ -48,6 +48,11 @@ struct SkinComp : Entity::Component
 
 	}
 
+	~SkinComp()
+	{
+		printf("release");
+	}
+
 	virtual bool empty() const
 	{
 		return false;
