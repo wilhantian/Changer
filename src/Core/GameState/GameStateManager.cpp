@@ -1,5 +1,6 @@
 #include "GameStateManager.h"
 #include "GameState.h"
+#include "Core/Base/utils.h"
 #include "Core/Logger/Logger.h"
 
 GameStateManager::GameStateManager():
@@ -26,7 +27,7 @@ void GameStateManager::destory()
 {
 	if (_instance)
 	{
-		delete _instance;
+		SAFE_DELETE(_instance);
 	}
 }
 
@@ -55,7 +56,6 @@ void GameStateManager::push(GameState* gameState)
     }
     
     _curGameState = gameState;
-    gameState->retain();
     gameState->onEnter();
     _stateList.push_back(gameState);
 }
@@ -70,23 +70,26 @@ void GameStateManager::pop()
     if (state)
     {
         state->onExit();
-        state->release();
+		SAFE_DELETE(state);
     }
     
-    _stateList.pop_back();
-    
+	_stateList.pop_back();
+
+	if (_stateList.size() == 0) {
+		_curGameState = nullptr;
+		return;
+	}
+
     state = _stateList.back();
-    
+
     if(state)
     {
         _curGameState = state;
         state->onEnter();
     }
-    else
-    {
-        _curGameState = nullptr;
-    }
-    
+	else{
+		_curGameState = nullptr;
+	}
 }
 
 void GameStateManager::update(float dt)

@@ -9,7 +9,8 @@
 
 int main()
 {
-	GameStateManager::getInstance()->push(TestState::create());
+	GameStateManager::getInstance()->push(new TestState());
+
 	Game::getInstance()->run();
 
 	return 0;

@@ -9,21 +9,21 @@
 #include "TestState.h"
 #include "Game/Component/PositionComp.h"
 #include "Game/System/System.h"
+#include "Core/Logger/Logger.h"
 
-bool TestState::init()
+TestState::TestState()
 {
-    if(!GameState::init()){
-        return false;
-    }
-    
-    // todo
+	// todo
 	Eid a = Entity::create(new PositionComp(20, 20), new SkinComp("E:/Changer/res/1.png"));
 	Eid b = Entity::create(new PositionComp(100, 100), new SkinComp("E:/Changer/res/2.jpg"));
     
 	Entity::destroyNow(a);
 	//Entity::destroyNow(b);
+}
 
-    return true;
+TestState::~TestState()
+{
+	Logger::debug("TestState release.");
 }
 
 void TestState::update(float dt)

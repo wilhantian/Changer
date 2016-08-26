@@ -8,11 +8,6 @@ GameState::~GameState()
 {
 }
 
-bool GameState::init()
-{
-	return true;
-}
-
 void GameState::onEnter()
 {
 

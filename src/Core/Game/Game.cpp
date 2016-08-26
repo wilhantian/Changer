@@ -3,7 +3,6 @@
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_image.h>
 #include "Core/Logger/Logger.h"
-#include "Core/Base/BaseObjectManager.h"
 #include "Core/GameState/GameState.h"
 #include "Core/GameState/GameStateManager.h"
 
@@ -60,8 +59,6 @@ void Game::run()
 			GameStateManager::getInstance()->update(_curDelay);
 			GameStateManager::getInstance()->draw();
             al_flip_display();
-            
-			BaseObjectManager::getInstance()->clear();
 		}
 	}
 

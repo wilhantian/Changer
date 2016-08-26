@@ -1,16 +1,14 @@
 #ifndef _GAME_STATE_H_
 #define _GAME_STATE_H_
 
-#include "Core/Base/BaseObject.h"
-
-class GameState : public BaseObject
+/**
+ * сно╥в╢л╛
+ */
+class GameState
 {
 public:
 	GameState();
 	virtual ~GameState();
-
-	CREATE_FUNC(GameState);
-	virtual bool init();
     
 public:
 	virtual void onEnter();

@@ -80,13 +80,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\Core\Base\BaseObject.cpp" />
-    <ClCompile Include="..\src\Core\Base\BaseObjectManager.cpp" />
     <ClCompile Include="..\src\Core\ECS\EntityFu.cpp" />
     <ClCompile Include="..\src\Core\GameState\GameState.cpp" />
     <ClCompile Include="..\src\Core\GameState\GameStateManager.cpp" />
     <ClCompile Include="..\src\Core\Game\Game.cpp" />
-    <ClCompile Include="..\src\Core\Grapics\Grapics.cpp" />
     <ClCompile Include="..\src\Core\Logger\Logger.cpp" />
     <ClCompile Include="..\src\Core\Math\Rect.cpp" />
     <ClCompile Include="..\src\Core\Math\Size.cpp" />
@@ -100,13 +97,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\Core\Base\BaseObject.h" />
-    <ClInclude Include="..\src\Core\Base\BaseObjectManager.h" />
+    <ClInclude Include="..\src\Core\Base\utils.h" />
     <ClInclude Include="..\src\Core\ECS\EntityFu.h" />
     <ClInclude Include="..\src\Core\GameState\GameState.h" />
     <ClInclude Include="..\src\Core\GameState\GameStateManager.h" />
     <ClInclude Include="..\src\Core\Game\Game.h" />
-    <ClInclude Include="..\src\Core\Grapics\Grapics.h" />
     <ClInclude Include="..\src\Core\Logger\Logger.h" />
     <ClInclude Include="..\src\Core\Math\Rect.h" />
     <ClInclude Include="..\src\Core\Math\Size.h" />

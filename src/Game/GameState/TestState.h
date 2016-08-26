@@ -14,11 +14,11 @@
 #include "Core/GameState/GameState.h"
 
 class TestState : public GameState
-{
+{   
 public:
-    CREATE_FUNC(TestState);
-    virtual bool init();
-    
+	TestState();
+	virtual ~TestState();
+
 public:
     virtual void update(float dt);
     virtual void draw();

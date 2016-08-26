@@ -10,9 +10,6 @@
     <Filter Include="src\Game">
       <UniqueIdentifier>{7e7c2c67-0a3c-47aa-9094-88bf95a5d875}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Core\Base">
-      <UniqueIdentifier>{69242920-720c-4b1f-a5f2-868f0be4cfa3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\Core\ECS">
       <UniqueIdentifier>{ea5f6977-752c-4019-b68f-0070aa7800ee}</UniqueIdentifier>
     </Filter>
@@ -43,15 +40,12 @@
     <Filter Include="src\Core\Grapics">
       <UniqueIdentifier>{1daa617c-60a6-45dc-9843-116bc4baff4a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Core\Base">
+      <UniqueIdentifier>{a2aa826b-8a24-4266-8629-035cb49f6187}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="..\src\Core\Base\BaseObjectManager.cpp">
-      <Filter>src\Core\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Core\Base\BaseObject.cpp">
-      <Filter>src\Core\Base</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\Core\ECS\EntityFu.cpp">
       <Filter>src\Core\ECS</Filter>
     </ClCompile>
@@ -85,20 +79,11 @@
     <ClCompile Include="..\src\Game\System\System.cpp">
       <Filter>src\Game\System</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Core\Grapics\Grapics.cpp">
-      <Filter>src\Core\Grapics</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\Core\Base\BaseObjectManager.h">
-      <Filter>src\Core\Base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Core\Base\BaseObject.h">
-      <Filter>src\Core\Base</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Core\ECS\EntityFu.h">
       <Filter>src\Core\ECS</Filter>
     </ClInclude>
@@ -132,8 +117,8 @@
     <ClInclude Include="..\src\Game\System\System.h">
       <Filter>src\Game\System</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Core\Grapics\Grapics.h">
-      <Filter>src\Core\Grapics</Filter>
+    <ClInclude Include="..\src\Core\Base\utils.h">
+      <Filter>src\Core\Base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
