@@ -70,14 +70,20 @@
     <ClCompile Include="..\src\Core\Math\Vector.cpp">
       <Filter>src\Core\Math</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Game\Component\PositionComp.cpp">
-      <Filter>src\Game\Component</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\Game\GameState\TestState.cpp">
       <Filter>src\Game\GameState</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Game\System\System.cpp">
       <Filter>src\Game\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Core\Grapics\Sprite.cpp">
+      <Filter>src\Core\Grapics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Game\System\SpriteSystem.cpp">
+      <Filter>src\Game\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Game\Component\ComDefine.cpp">
+      <Filter>src\Game\Component</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -108,9 +114,6 @@
     <ClInclude Include="..\src\Core\Math\Size.h">
       <Filter>src\Core\Math</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Game\Component\PositionComp.h">
-      <Filter>src\Game\Component</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Game\GameState\TestState.h">
       <Filter>src\Game\GameState</Filter>
     </ClInclude>
@@ -119,6 +122,18 @@
     </ClInclude>
     <ClInclude Include="..\src\Core\Base\utils.h">
       <Filter>src\Core\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Core\Grapics\Sprite.h">
+      <Filter>src\Core\Grapics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Game\Component\ComDefine.h">
+      <Filter>src\Game\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Game\Component\SpriteCom.h">
+      <Filter>src\Game\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Game\System\SpriteSystem.h">
+      <Filter>src\Game\System</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

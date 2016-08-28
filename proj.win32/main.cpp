@@ -4,6 +4,7 @@
 #include "Core/GameState/GameStateManager.h"
 #include "Core/ECS/EntityFu.h"
 #include "Game/GameState/TestState.h"
+#include "Game/Component/ComDefine.h"
 
 /*Cid Entity::Component::numCids = 0;*/
 
