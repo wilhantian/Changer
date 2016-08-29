@@ -2,6 +2,7 @@
 #define _RENDER_COMP_H_
 
 #include <vector>
+#include <string>
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_image.h>
 #include "Core/ECS/EntityFu.h"
@@ -21,11 +22,12 @@ struct SpriteCom : Entity::Component
 	float w = 0;
 	float h = 0;
 	SpriteType spriteType = SpriteType::Static;
+    std::string fileName;
 	float frameRate = 0;
 	float curFrameDelay = 0;
 	ALLEGRO_BITMAP* curFrame = nullptr;
 	std::vector<ALLEGRO_BITMAP*> frames;
-
+    
 	SpriteCom()
 	{
 	}
