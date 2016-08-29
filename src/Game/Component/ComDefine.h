@@ -3,6 +3,7 @@
 
 #include "Core/ECS/EntityFu.h"
 #include "SpriteCom.h"
+#include "PositionCom.h"
 
 /// 组件在.cpp中注册
 /// 预定义系统组件
@@ -11,6 +12,7 @@ struct System::Ent
 	Eid id;
 	// BEGIN
 	SpriteCom& sprite;
+	PositionCom& position;
 	// END
 
 	Ent(Eid _id);

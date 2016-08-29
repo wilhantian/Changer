@@ -5,4 +5,3 @@ void RenderSystem::tick(double fixedDelta)
 {
 	
 }
-

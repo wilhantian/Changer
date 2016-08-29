@@ -84,6 +84,7 @@
     <ClCompile Include="..\src\Core\GameState\GameState.cpp" />
     <ClCompile Include="..\src\Core\GameState\GameStateManager.cpp" />
     <ClCompile Include="..\src\Core\Game\Game.cpp" />
+    <ClCompile Include="..\src\Core\Grapics\Grapics.cpp" />
     <ClCompile Include="..\src\Core\Grapics\Sprite.cpp" />
     <ClCompile Include="..\src\Core\Logger\Logger.cpp" />
     <ClCompile Include="..\src\Core\Math\Rect.cpp" />
@@ -104,12 +105,14 @@
     <ClInclude Include="..\src\Core\GameState\GameState.h" />
     <ClInclude Include="..\src\Core\GameState\GameStateManager.h" />
     <ClInclude Include="..\src\Core\Game\Game.h" />
+    <ClInclude Include="..\src\Core\Grapics\Grapics.h" />
     <ClInclude Include="..\src\Core\Grapics\Sprite.h" />
     <ClInclude Include="..\src\Core\Logger\Logger.h" />
     <ClInclude Include="..\src\Core\Math\Rect.h" />
     <ClInclude Include="..\src\Core\Math\Size.h" />
     <ClInclude Include="..\src\Core\Math\Vector.h" />
     <ClInclude Include="..\src\Game\Component\ComDefine.h" />
+    <ClInclude Include="..\src\Game\Component\PositionCom.h" />
     <ClInclude Include="..\src\Game\Component\SpriteCom.h" />
     <ClInclude Include="..\src\Game\GameState\TestState.h" />
     <ClInclude Include="..\src\Game\System\SpriteSystem.h" />

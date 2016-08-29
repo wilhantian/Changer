@@ -11,9 +11,11 @@
 /// 定义组件
 DEFINE_COM_BEGIN
 DEFINE_COM(SpriteCom)
+DEFINE_COM(PositionCom)
 DEFINE_COM_END
 
 /// 注册组件
 REGISTER_COM_BEGIN
 REGISTER_COM(SpriteCom, sprite)
+REGISTER_COM(PositionCom, position)
 REGISTER_COM_ENG

@@ -7,9 +7,10 @@
 //
 
 #include "TestState.h"
+#include "Core/Logger/Logger.h"
 #include "Game/System/System.h"
 #include "Game/System/SpriteSystem.h"
-#include "Core/Logger/Logger.h"
+#include "Game/Component/ComDefine.h"
 
 TestState::TestState()
 {
@@ -17,6 +18,12 @@ TestState::TestState()
 // 	Eid a = Entity::create(new PositionComp(20, 20), new SkinComp("E:/Changer/res/1.png"));
 // 	Eid b = Entity::create(new PositionComp(100, 100), new SkinComp("E:/Changer/res/2.jpg"));
     
+	PositionCom* posCom = new PositionCom(120, 120);
+	SpriteCom* spriteCom = new SpriteCom("E:/Changer/res/Sprite-0001.png", 2, 45, 45, 20, 2);
+	Eid a = Entity::create(posCom, spriteCom);
+
+	Eid b = Entity::create(new PositionCom(120, 120), new SpriteCom("E:/Changer/res/1.png"));
+
 	//Entity::destroyNow(a);
 	//Entity::destroyNow(b);
 }

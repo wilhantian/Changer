@@ -9,44 +9,49 @@
 
 enum SpriteType
 {
-	Static,//¾²Ì¬
-	Anime//Ö¡¶¯»­
+	None,
+	Static,//just have one image/frames
+	Anime//have some frame
 };
 
 struct SpriteCom : Entity::Component
 {
 	static Cid cid;
 
-	float x = 0;
-	float y = 0;
-	float w = 0;
-	float h = 0;
-	SpriteType spriteType = SpriteType::Static;
-    std::string fileName;
-	float frameRate = 0;
+	SpriteType spriteType = SpriteType::None;
+	std::string filename;
+	int frameSize = 0;
+	int frameWidth = 0;
+	int frameHeight = 0;
+	int frameCol = 0;
+	int frameRate = 0;
+
 	float curFrameDelay = 0;
-	ALLEGRO_BITMAP* curFrame = nullptr;
-	std::vector<ALLEGRO_BITMAP*> frames;
+	int curFrame = 0;
+	ALLEGRO_BITMAP* bitmap = nullptr;
     
 	SpriteCom()
+		: spriteType(SpriteType::None)
 	{
 	}
 
-	SpriteCom(float x, float y, float w, float h) :
-		x(x),
-		y(y),
-		w(w),
-		h(h)
+	/// Static
+	SpriteCom(std::string filename)
+		: spriteType(SpriteType::Static)
+		, filename(filename)
 	{
 	}
 
-	SpriteCom(float x, float y, float w, float h, std::vector<ALLEGRO_BITMAP*> frames, float frameRate) :
-		x(x),
-		y(y),
-		w(w),
-		h(h),
-		frames(frames),
-		frameRate(frameRate)
+	/// Anime
+	SpriteCom(std::string filename
+			, int frameSize, int frameWidth, int frameHeight, int frameRate, int frameCol)
+		: spriteType(SpriteType::Anime)
+		, filename(filename)
+		, frameSize(frameSize)
+		, frameWidth(frameWidth)
+		, frameHeight(frameHeight)
+		, frameRate(frameRate)
+		, frameCol(frameCol)
 	{
 	}
 
