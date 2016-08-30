@@ -71,7 +71,7 @@
 		8739A5081D73F37500539BE9 /* ComDefine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ComDefine.cpp; sourceTree = "<group>"; };
 		8739A5091D73F37500539BE9 /* ComDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComDefine.h; sourceTree = "<group>"; };
 		8739A50A1D73F37500539BE9 /* SpriteCom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteCom.h; sourceTree = "<group>"; };
-		8739A50D1D73F37500539BE9 /* TestState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestState.cpp; sourceTree = "<group>"; };
+		8739A50D1D73F37500539BE9 /* TestState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestState.cpp; sourceTree = "<group>"; wrapsLines = 1; };
 		8739A50E1D73F37500539BE9 /* TestState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestState.h; sourceTree = "<group>"; };
 		8739A5101D73F37500539BE9 /* SpriteSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteSystem.cpp; sourceTree = "<group>"; };
 		8739A5111D73F37500539BE9 /* SpriteSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteSystem.h; sourceTree = "<group>"; };
@@ -91,6 +91,7 @@
 		8769190D1D588D71009918CB /* liballegro_primitives.5.0.11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_primitives.5.0.11.dylib; path = /usr/local/lib/liballegro_primitives.5.0.11.dylib; sourceTree = "<absolute>"; };
 		8769190E1D588D71009918CB /* liballegro_ttf.5.0.11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_ttf.5.0.11.dylib; path = /usr/local/lib/liballegro_ttf.5.0.11.dylib; sourceTree = "<absolute>"; };
 		8769190F1D588D71009918CB /* liballegro.5.0.11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro.5.0.11.dylib; path = /usr/local/lib/liballegro.5.0.11.dylib; sourceTree = "<absolute>"; };
+		87950FD01D7541E6004CAB0E /* PositionCom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionCom.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +214,7 @@
 		8739A5071D73F37500539BE9 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				87950FD01D7541E6004CAB0E /* PositionCom.h */,
 				8739A5081D73F37500539BE9 /* ComDefine.cpp */,
 				8739A5091D73F37500539BE9 /* ComDefine.h */,
 				8739A50A1D73F37500539BE9 /* SpriteCom.h */,

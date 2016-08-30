@@ -16,13 +16,13 @@ TestState::TestState()
 {
 	// todo
 // 	Eid a = Entity::create(new PositionComp(20, 20), new SkinComp("E:/Changer/res/1.png"));
-// 	Eid b = Entity::create(new PositionComp(100, 100), new SkinComp("E:/Changer/res/2.jpg"));
+// 	Eid b = Entity::create(new PositionComp(100, 100), new SkinComp("/Users/wilhantian/Dev/WorkSpace/Changer/res/Sprite-0001.png"));
     
 	PositionCom* posCom = new PositionCom(120, 120);
-	SpriteCom* spriteCom = new SpriteCom("E:/Changer/res/Sprite-0001.png", 2, 45, 45, 20, 2);
-	Eid a = Entity::create(posCom, spriteCom);
+	SpriteCom* spriteCom = new SpriteCom("/Users/wilhantian/Dev/WorkSpace/Changer/res/Sprite-0001.png", 2, 45, 45, 20, 2);
+    Entity::create(posCom, spriteCom);
 
-	Eid b = Entity::create(new PositionCom(120, 120), new SpriteCom("E:/Changer/res/1.png"));
+    Entity::create(new PositionCom(120, 120), new SpriteCom("/Users/wilhantian/Dev/WorkSpace/Changer/res/1.png"));
 
 	//Entity::destroyNow(a);
 	//Entity::destroyNow(b);

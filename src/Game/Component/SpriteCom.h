@@ -24,7 +24,7 @@ struct SpriteCom : Entity::Component
 	int frameWidth = 0;
 	int frameHeight = 0;
 	int frameCol = 0;
-	int frameRate = 0;
+	float frameRate = 0;
 
 	float curFrameDelay = 0;
 	int curFrame = 0;
@@ -44,7 +44,7 @@ struct SpriteCom : Entity::Component
 
 	/// Anime
 	SpriteCom(std::string filename
-			, int frameSize, int frameWidth, int frameHeight, int frameRate, int frameCol)
+			, int frameSize, int frameWidth, int frameHeight, float frameRate, int frameCol)
 		: spriteType(SpriteType::Anime)
 		, filename(filename)
 		, frameSize(frameSize)
