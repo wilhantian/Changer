@@ -1,6 +1,7 @@
 #include "Logger.h"
 #include <stdarg.h>
 #include <stdio.h>
+#include <assert.h>
 
 void Logger::debug(const char *str, ...)
 {
@@ -30,5 +31,11 @@ void Logger::error(const char *str, ...)
 	vprintf(str, ap);
 	printf("\n");
 	va_end(ap);
+}
+
+void Logger::assertion(int e, const char* str)
+{
+	assert(e);
+	//Logger::error(str);
 }
 

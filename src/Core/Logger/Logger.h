@@ -7,7 +7,7 @@ public:
 	static void debug(const char *str, ...);
 	static void warn(const char *str, ...);
 	static void error(const char *str, ...);
-
+	static void assertion(int e, const char* str = "");
 private:
 	Logger(){};
 };

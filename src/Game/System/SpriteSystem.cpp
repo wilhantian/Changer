@@ -1,5 +1,6 @@
 #include "SpriteSystem.h"
 #include "Game/Component/ComDefine.h"
+#include "Core/Logger/Logger.h"
 
 void SpriteSystem::tick(double fixedDelta)
 {
@@ -13,6 +14,7 @@ void SpriteSystem::tick(double fixedDelta)
 		if (!sprite.bitmap)//not init
 		{
 			sprite.bitmap = al_load_bitmap(sprite.filename.c_str());
+			Logger::assertion(sprite.bitmap != nullptr, "bitmap is null");
 		}
 
 		if (sprite.spriteType == SpriteType::Static)
@@ -26,19 +28,19 @@ void SpriteSystem::tick(double fixedDelta)
 			int centerX = 0;
 			int centerY = 0;
 
-//			al_draw_tinted_scaled_rotated_bitmap_region(
-//				sprite.bitmap,
-//				sourceX, sourceY, sourceW, sourceH,
-//				al_map_rgb_f(1, 1, 1),
-//				centerX, centerY,
-//				x, y,
-//				1, 1,
-//				0, 0
-//			);
+			al_draw_tinted_scaled_rotated_bitmap_region(
+				sprite.bitmap,
+				sourceX, sourceY, sourceW, sourceH,
+				al_map_rgb_f(1, 1, 1),
+				centerX, centerY,
+				x, y,
+				1, 1,
+				0, 0
+			);
 		}
 		else if (sprite.spriteType == SpriteType::Anime)
 		{
-            if(sprite.curFrameDelay >= sprite.frameRate*0.001f)
+            if(sprite.curFrameDelay >= (1000.f/sprite.frameRate)*0.001f)
             {
                 sprite.curFrameDelay = 0;
                 sprite.curFrame = (sprite.curFrame + 1) % sprite.frameSize;
