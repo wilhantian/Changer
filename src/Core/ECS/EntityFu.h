@@ -136,9 +136,10 @@ struct Entity::Component
 	virtual bool full() const;
 	static Cid numCids;
     
-	// static Cid cid;
+	// static Cid cid; or CREATE_CID;
 };
 
+#define CREATE_CID static Cid cid
 
 ///
 /// Convenience macro to get a reference to a component or else run some code.

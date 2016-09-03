@@ -39,11 +39,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros">
-    <NuGetPackageImportStamp>0e822588</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>2ada839e</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <Allegro_AddonImage>true</Allegro_AddonImage>
+    <Allegro_AddonPrimitives>true</Allegro_AddonPrimitives>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -55,11 +56,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>E:\Changer\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\third-party;$(ProjectDir)\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OpenGL32.Lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -92,8 +94,56 @@
     <ClCompile Include="..\src\Core\Math\Vector.cpp" />
     <ClCompile Include="..\src\Game\Component\ComDefine.cpp" />
     <ClCompile Include="..\src\Game\GameState\TestState.cpp" />
+    <ClCompile Include="..\src\Game\System\PhysicsSystem.cpp" />
     <ClCompile Include="..\src\Game\System\SpriteSystem.cpp" />
     <ClCompile Include="..\src\Game\System\System.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Box2dRender.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Collision\b2BroadPhase.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Collision\b2CollideCircle.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Collision\b2CollideEdge.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Collision\b2CollidePolygon.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Collision\b2Collision.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Collision\b2Distance.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Collision\b2DynamicTree.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Collision\b2TimeOfImpact.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Collision\Shapes\b2ChainShape.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Collision\Shapes\b2CircleShape.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Collision\Shapes\b2EdgeShape.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Collision\Shapes\b2PolygonShape.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Common\b2BlockAllocator.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Common\b2Draw.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Common\b2Math.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Common\b2Settings.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Common\b2StackAllocator.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Common\b2Timer.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\b2Body.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\b2ContactManager.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\b2Fixture.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\b2Island.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\b2World.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\b2WorldCallbacks.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Contacts\b2ChainAndCircleContact.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Contacts\b2ChainAndPolygonContact.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Contacts\b2CircleContact.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Contacts\b2Contact.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Contacts\b2ContactSolver.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Contacts\b2EdgeAndCircleContact.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Contacts\b2EdgeAndPolygonContact.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Contacts\b2PolygonAndCircleContact.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Contacts\b2PolygonContact.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Joints\b2DistanceJoint.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Joints\b2FrictionJoint.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Joints\b2GearJoint.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Joints\b2Joint.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Joints\b2MotorJoint.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Joints\b2MouseJoint.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Joints\b2PrismaticJoint.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Joints\b2PulleyJoint.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Joints\b2RevoluteJoint.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Joints\b2RopeJoint.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Joints\b2WeldJoint.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Dynamics\Joints\b2WheelJoint.cpp" />
+    <ClCompile Include="..\third-party\Box2D\Rope\b2Rope.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -112,11 +162,62 @@
     <ClInclude Include="..\src\Core\Math\Size.h" />
     <ClInclude Include="..\src\Core\Math\Vector.h" />
     <ClInclude Include="..\src\Game\Component\ComDefine.h" />
+    <ClInclude Include="..\src\Game\Component\PhysicsCom.h" />
     <ClInclude Include="..\src\Game\Component\PositionCom.h" />
     <ClInclude Include="..\src\Game\Component\SpriteCom.h" />
+    <ClInclude Include="..\src\Game\Component\VelocityCom.h" />
     <ClInclude Include="..\src\Game\GameState\TestState.h" />
+    <ClInclude Include="..\src\Game\System\PhysicsSystem.h" />
     <ClInclude Include="..\src\Game\System\SpriteSystem.h" />
     <ClInclude Include="..\src\Game\System\System.h" />
+    <ClInclude Include="..\third-party\Box2D\Box2D.h" />
+    <ClInclude Include="..\third-party\Box2D\Box2dRender.h" />
+    <ClInclude Include="..\third-party\Box2D\Collision\b2BroadPhase.h" />
+    <ClInclude Include="..\third-party\Box2D\Collision\b2Collision.h" />
+    <ClInclude Include="..\third-party\Box2D\Collision\b2Distance.h" />
+    <ClInclude Include="..\third-party\Box2D\Collision\b2DynamicTree.h" />
+    <ClInclude Include="..\third-party\Box2D\Collision\b2TimeOfImpact.h" />
+    <ClInclude Include="..\third-party\Box2D\Collision\Shapes\b2ChainShape.h" />
+    <ClInclude Include="..\third-party\Box2D\Collision\Shapes\b2CircleShape.h" />
+    <ClInclude Include="..\third-party\Box2D\Collision\Shapes\b2EdgeShape.h" />
+    <ClInclude Include="..\third-party\Box2D\Collision\Shapes\b2PolygonShape.h" />
+    <ClInclude Include="..\third-party\Box2D\Collision\Shapes\b2Shape.h" />
+    <ClInclude Include="..\third-party\Box2D\Common\b2BlockAllocator.h" />
+    <ClInclude Include="..\third-party\Box2D\Common\b2Draw.h" />
+    <ClInclude Include="..\third-party\Box2D\Common\b2GrowableStack.h" />
+    <ClInclude Include="..\third-party\Box2D\Common\b2Math.h" />
+    <ClInclude Include="..\third-party\Box2D\Common\b2Settings.h" />
+    <ClInclude Include="..\third-party\Box2D\Common\b2StackAllocator.h" />
+    <ClInclude Include="..\third-party\Box2D\Common\b2Timer.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\b2Body.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\b2ContactManager.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\b2Fixture.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\b2Island.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\b2TimeStep.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\b2World.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\b2WorldCallbacks.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Contacts\b2ChainAndCircleContact.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Contacts\b2ChainAndPolygonContact.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Contacts\b2CircleContact.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Contacts\b2Contact.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Contacts\b2ContactSolver.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Contacts\b2EdgeAndCircleContact.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Contacts\b2EdgeAndPolygonContact.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Contacts\b2PolygonAndCircleContact.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Contacts\b2PolygonContact.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Joints\b2DistanceJoint.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Joints\b2FrictionJoint.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Joints\b2GearJoint.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Joints\b2Joint.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Joints\b2MotorJoint.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Joints\b2MouseJoint.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Joints\b2PrismaticJoint.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Joints\b2PulleyJoint.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Joints\b2RevoluteJoint.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Joints\b2RopeJoint.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Joints\b2WeldJoint.h" />
+    <ClInclude Include="..\third-party\Box2D\Dynamics\Joints\b2WheelJoint.h" />
+    <ClInclude Include="..\third-party\Box2D\Rope\b2Rope.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

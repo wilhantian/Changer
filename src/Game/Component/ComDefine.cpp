@@ -12,10 +12,14 @@
 DEFINE_COM_BEGIN
 DEFINE_COM(SpriteCom)
 DEFINE_COM(PositionCom)
+DEFINE_COM(VelocityCom)
+DEFINE_COM(PhysicsCom)
 DEFINE_COM_END
 
 /// ×¢²á×é¼þ
 REGISTER_COM_BEGIN
 REGISTER_COM(SpriteCom, sprite)
 REGISTER_COM(PositionCom, position)
+REGISTER_COM(VelocityCom, velocity)
+REGISTER_COM(PhysicsCom, physics)
 REGISTER_COM_ENG

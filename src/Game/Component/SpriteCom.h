@@ -16,7 +16,7 @@ enum SpriteType
 
 struct SpriteCom : Entity::Component
 {
-	static Cid cid;
+	CREATE_CID;
 
 	SpriteType spriteType = SpriteType::None;
 	std::string filename;

@@ -5,7 +5,7 @@
 
 struct PositionCom : Entity::Component
 {
-	static Cid cid;
+	CREATE_CID;
 
 	float x;
 	float y;
