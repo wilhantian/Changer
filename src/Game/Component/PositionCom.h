@@ -2,6 +2,7 @@
 #define _POSITION_COM_H_
 
 #include "Core/ECS/EntityFu.h"
+#include "Box2D/Box2D.h"
 
 struct PositionCom : Entity::Component
 {

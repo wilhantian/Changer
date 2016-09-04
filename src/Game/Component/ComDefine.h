@@ -4,7 +4,6 @@
 #include "Core/ECS/EntityFu.h"
 #include "SpriteCom.h"
 #include "PositionCom.h"
-#include "VelocityCom.h"
 #include "PhysicsCom.h"
 
 /// 组件在.cpp中注册
@@ -15,7 +14,6 @@ struct System::Ent
 	// BEGIN
 	SpriteCom& sprite;
 	PositionCom& position;
-	VelocityCom& velocity;
 	PhysicsCom& physics;
 	// END
 

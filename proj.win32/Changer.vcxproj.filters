@@ -100,9 +100,6 @@
     <ClCompile Include="..\src\Game\GameState\TestState.cpp">
       <Filter>src\Game\GameState</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Game\System\System.cpp">
-      <Filter>src\Game\System</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\Core\Grapics\Sprite.cpp">
       <Filter>src\Core\Grapics</Filter>
     </ClCompile>
@@ -291,9 +288,6 @@
     <ClInclude Include="..\src\Game\GameState\TestState.h">
       <Filter>src\Game\GameState</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Game\System\System.h">
-      <Filter>src\Game\System</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Core\Base\utils.h">
       <Filter>src\Core\Base</Filter>
     </ClInclude>
@@ -463,9 +457,6 @@
       <Filter>src\Game\System</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Game\Component\PhysicsCom.h">
-      <Filter>src\Game\Component</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Game\Component\VelocityCom.h">
       <Filter>src\Game\Component</Filter>
     </ClInclude>
   </ItemGroup>

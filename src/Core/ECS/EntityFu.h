@@ -13,9 +13,6 @@ typedef unsigned Eid;
 /// A `Cid` is a component ID.
 typedef unsigned Cid;
 
-/// A `Sid` is a system ID.
-typedef unsigned Sid;
-
 namespace Entity
 {
 	struct Component;

@@ -96,7 +96,6 @@
     <ClCompile Include="..\src\Game\GameState\TestState.cpp" />
     <ClCompile Include="..\src\Game\System\PhysicsSystem.cpp" />
     <ClCompile Include="..\src\Game\System\SpriteSystem.cpp" />
-    <ClCompile Include="..\src\Game\System\System.cpp" />
     <ClCompile Include="..\third-party\Box2D\Box2dRender.cpp" />
     <ClCompile Include="..\third-party\Box2D\Collision\b2BroadPhase.cpp" />
     <ClCompile Include="..\third-party\Box2D\Collision\b2CollideCircle.cpp" />
@@ -165,11 +164,9 @@
     <ClInclude Include="..\src\Game\Component\PhysicsCom.h" />
     <ClInclude Include="..\src\Game\Component\PositionCom.h" />
     <ClInclude Include="..\src\Game\Component\SpriteCom.h" />
-    <ClInclude Include="..\src\Game\Component\VelocityCom.h" />
     <ClInclude Include="..\src\Game\GameState\TestState.h" />
     <ClInclude Include="..\src\Game\System\PhysicsSystem.h" />
     <ClInclude Include="..\src\Game\System\SpriteSystem.h" />
-    <ClInclude Include="..\src\Game\System\System.h" />
     <ClInclude Include="..\third-party\Box2D\Box2D.h" />
     <ClInclude Include="..\third-party\Box2D\Box2dRender.h" />
     <ClInclude Include="..\third-party\Box2D\Collision\b2BroadPhase.h" />

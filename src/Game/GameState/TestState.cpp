@@ -7,16 +7,17 @@
 //
 
 #include "TestState.h"
+#include "Box2D/Box2D.h"
 #include "Core/Logger/Logger.h"
-#include "Game/System/System.h"
 #include "Game/System/SpriteSystem.h"
+#include "Game/System/PhysicsSystem.h"
 #include "Game/Component/ComDefine.h"
 
 TestState::TestState()
 {
-    
 	PositionCom* posCom = new PositionCom(120, 120);
 	SpriteCom* spriteCom = new SpriteCom("E://Changer/res/Sprite-0001.png", 2, 45, 45, 24, 2);
+
     Entity::create(posCom, spriteCom);
 
     Entity::create(new PositionCom(350, 350), new SpriteCom("E://Changer/res/1.png"));
@@ -29,7 +30,7 @@ TestState::~TestState()
 
 void TestState::update(float dt)
 {
-	RenderSystem::tick(dt);
+	PhysicsSystem::tick(dt);
 	SpriteSystem::tick(dt);
 }
 
