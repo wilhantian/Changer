@@ -29,13 +29,13 @@ void Box2dRender::DrawSolidPolygon(const b2Vec2* vertices, int32 vertexCount, co
 /// Draw a circle.
 void Box2dRender::DrawCircle(const b2Vec2& center, float32 radius, const b2Color& color)
 {
-	al_draw_circle(center.x, center.y, radius, al_map_rgb(color.r, color.g, color.b), 3);
+	al_draw_circle(center.x, center.y, radius, al_map_rgba_f(color.r, color.g, color.b, color.a), 2);
 }
 
 /// Draw a solid circle.
 void Box2dRender::DrawSolidCircle(const b2Vec2& center, float32 radius, const b2Vec2& axis, const b2Color& color)
 {
-	al_draw_circle(center.x, center.y, radius, al_map_rgb(color.r, color.g, color.b), 3);
+	al_draw_circle(center.x, center.y, radius, al_map_rgba_f(color.r, color.g, color.b, color.a), 2);
     
     // Draw the axis line
     DrawSegment(center,center+radius*axis,color);
@@ -44,7 +44,7 @@ void Box2dRender::DrawSolidCircle(const b2Vec2& center, float32 radius, const b2
 /// Draw a line segment.
 void Box2dRender::DrawSegment(const b2Vec2& p1, const b2Vec2& p2, const b2Color& color)
 {
-	al_draw_line(p1.x, p1.y, p2.x, p2.y, al_map_rgb(color.r, color.g, color.b), 3);
+	al_draw_line(p1.x, p1.y, p2.x, p2.y, al_map_rgba_f(color.r, color.g, color.b, color.a), 2);
 }
 
 /// Draw a transform. Choose your own length scale.

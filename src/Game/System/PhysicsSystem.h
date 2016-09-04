@@ -10,8 +10,8 @@ class PhysicsSystem : public System
 public:
 	static void tick(double fixedDelta);
 
-private:
-	static b2World* _world;
+public:
+	static b2World* world;
 };
 
 #endif//_PHYSICS_SYSTEM_H_

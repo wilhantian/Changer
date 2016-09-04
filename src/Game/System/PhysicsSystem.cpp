@@ -5,13 +5,6 @@
 
 void PhysicsSystem::tick(double fixedDelta)
 {
-	if (!_world)//init
-	{
-		b2Vec2 gravity(0, -10);
-		_world = new b2World(gravity);
-		_world->SetDebugDraw(new Box2dRender());
-	}
-
 	auto all = Entity::getAll<PhysicsCom>();
 	for (Eid id : all)
 	{
@@ -29,8 +22,8 @@ void PhysicsSystem::tick(double fixedDelta)
 		position.y = bodyPos.y;
 	}
 
-	_world->Step(fixedDelta, 6, 2);
-	_world->DrawDebugData();
+	world->Step(fixedDelta, 6, 2);
+	world->DrawDebugData();
 }
 
-b2World* PhysicsSystem::_world = nullptr;
+b2World* PhysicsSystem::world = nullptr;
