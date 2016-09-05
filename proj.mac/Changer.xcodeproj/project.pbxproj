@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		870E44D41D7CFC4E0060A5B4 /* PhysicsSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 870E44D21D7CFC4E0060A5B4 /* PhysicsSystem.cpp */; settings = {ASSET_TAGS = (); }; };
 		8739A5141D73F37500539BE9 /* EntityFu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8739A4EE1D73F37500539BE9 /* EntityFu.cpp */; settings = {ASSET_TAGS = (); }; };
 		8739A5151D73F37500539BE9 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8739A4F21D73F37500539BE9 /* Game.cpp */; settings = {ASSET_TAGS = (); }; };
 		8739A5161D73F37500539BE9 /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8739A4F51D73F37500539BE9 /* GameState.cpp */; settings = {ASSET_TAGS = (); }; };
@@ -19,7 +20,6 @@
 		8739A51D1D73F37500539BE9 /* ComDefine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8739A5081D73F37500539BE9 /* ComDefine.cpp */; settings = {ASSET_TAGS = (); }; };
 		8739A51E1D73F37500539BE9 /* TestState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8739A50D1D73F37500539BE9 /* TestState.cpp */; settings = {ASSET_TAGS = (); }; };
 		8739A51F1D73F37500539BE9 /* SpriteSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8739A5101D73F37500539BE9 /* SpriteSystem.cpp */; settings = {ASSET_TAGS = (); }; };
-		8739A5201D73F37500539BE9 /* System.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8739A5121D73F37500539BE9 /* System.cpp */; settings = {ASSET_TAGS = (); }; };
 		876918551D5813BC009918CB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 876918531D5813BC009918CB /* main.cpp */; settings = {ASSET_TAGS = (); }; };
 		876919101D588D71009918CB /* liballegro_acodec.5.0.11.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 876919041D588D71009918CB /* liballegro_acodec.5.0.11.dylib */; };
 		876919111D588D71009918CB /* liballegro_audio.5.0.11.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 876919051D588D71009918CB /* liballegro_audio.5.0.11.dylib */; };
@@ -97,6 +97,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		870E44D21D7CFC4E0060A5B4 /* PhysicsSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhysicsSystem.cpp; sourceTree = "<group>"; };
+		870E44D31D7CFC4E0060A5B4 /* PhysicsSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsSystem.h; sourceTree = "<group>"; };
+		870E44D51D7CFC580060A5B4 /* PhysicsCom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsCom.h; sourceTree = "<group>"; };
 		8739A4EC1D73F37500539BE9 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
 		8739A4EE1D73F37500539BE9 /* EntityFu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntityFu.cpp; sourceTree = "<group>"; };
 		8739A4EF1D73F37500539BE9 /* EntityFu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityFu.h; sourceTree = "<group>"; };
@@ -124,8 +127,6 @@
 		8739A50E1D73F37500539BE9 /* TestState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestState.h; sourceTree = "<group>"; };
 		8739A5101D73F37500539BE9 /* SpriteSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteSystem.cpp; sourceTree = "<group>"; };
 		8739A5111D73F37500539BE9 /* SpriteSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteSystem.h; sourceTree = "<group>"; };
-		8739A5121D73F37500539BE9 /* System.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = System.cpp; sourceTree = "<group>"; };
-		8739A5131D73F37500539BE9 /* System.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = System.h; sourceTree = "<group>"; };
 		876918491D581339009918CB /* Changer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Changer; sourceTree = BUILT_PRODUCTS_DIR; };
 		876918531D5813BC009918CB /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		876919041D588D71009918CB /* liballegro_acodec.5.0.11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_acodec.5.0.11.dylib; path = /usr/local/lib/liballegro_acodec.5.0.11.dylib; sourceTree = "<absolute>"; };
@@ -361,6 +362,7 @@
 		8739A5071D73F37500539BE9 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				870E44D51D7CFC580060A5B4 /* PhysicsCom.h */,
 				87950FD01D7541E6004CAB0E /* PositionCom.h */,
 				8739A5081D73F37500539BE9 /* ComDefine.cpp */,
 				8739A5091D73F37500539BE9 /* ComDefine.h */,
@@ -388,10 +390,10 @@
 		8739A50F1D73F37500539BE9 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				870E44D21D7CFC4E0060A5B4 /* PhysicsSystem.cpp */,
+				870E44D31D7CFC4E0060A5B4 /* PhysicsSystem.h */,
 				8739A5101D73F37500539BE9 /* SpriteSystem.cpp */,
 				8739A5111D73F37500539BE9 /* SpriteSystem.h */,
-				8739A5121D73F37500539BE9 /* System.cpp */,
-				8739A5131D73F37500539BE9 /* System.h */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -670,8 +672,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8795118C1D790D02004CAB0E /* b2WeldJoint.cpp in Sources */,
-				8739A5201D73F37500539BE9 /* System.cpp in Sources */,
 				8795116E1D790D02004CAB0E /* b2Draw.cpp in Sources */,
+				870E44D41D7CFC4E0060A5B4 /* PhysicsSystem.cpp in Sources */,
 				879511731D790D02004CAB0E /* b2Body.cpp in Sources */,
 				8795117A1D790D02004CAB0E /* b2ChainAndPolygonContact.cpp in Sources */,
 				8739A51F1D73F37500539BE9 /* SpriteSystem.cpp in Sources */,

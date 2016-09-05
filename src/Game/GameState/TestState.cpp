@@ -31,7 +31,7 @@ TestState::TestState()
 
 
 	PositionCom* posCom = new PositionCom(120, 120);
-	SpriteCom* spriteCom = new SpriteCom("E://Changer/res/Sprite-0001.png", 2, 45, 45, 24, 2);
+	SpriteCom* spriteCom = new SpriteCom("/Users/wilhantian/Dev/WorkSpace/Changer/res/Sprite-0001.png", 2, 45, 45, 24, 2);
 
 	b2BodyDef bodyDef;
 	bodyDef.position.Set(150, 50);
@@ -66,7 +66,7 @@ TestState::TestState()
 		Entity::create(physics);
 	}
 
-    Entity::create(new PositionCom(350, 350), new SpriteCom("E://Changer/res/1.png"));
+    Entity::create(new PositionCom(350, 350), new SpriteCom("/Users/wilhantian/Dev/WorkSpace/Changer/res/1.png"));
 }
 
 TestState::~TestState()
