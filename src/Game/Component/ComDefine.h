@@ -5,6 +5,7 @@
 #include "SpriteCom.h"
 #include "PositionCom.h"
 #include "PhysicsCom.h"
+#include "BodyCom.h"
 
 /// 组件在.cpp中注册
 /// 预定义系统组件
@@ -15,6 +16,7 @@ struct System::Ent
 	SpriteCom& sprite;
 	PositionCom& position;
 	PhysicsCom& physics;
+	BodyCom& body;
 	// END
 
 	Ent(Eid _id);
