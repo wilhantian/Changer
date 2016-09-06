@@ -83,6 +83,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Core\ECS\EntityFu.cpp" />
+    <ClCompile Include="..\src\Core\Event\EventWh.cpp" />
     <ClCompile Include="..\src\Core\GameState\GameState.cpp" />
     <ClCompile Include="..\src\Core\GameState\GameStateManager.cpp" />
     <ClCompile Include="..\src\Core\Game\Game.cpp" />

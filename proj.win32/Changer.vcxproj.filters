@@ -262,6 +262,9 @@
     <ClCompile Include="..\src\Game\Component\BodyCom.cpp">
       <Filter>src\Game\Component</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Core\Event\EventWh.cpp">
+      <Filter>src\Core\Event</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
