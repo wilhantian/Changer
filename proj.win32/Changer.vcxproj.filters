@@ -70,6 +70,9 @@
     <Filter Include="third-party\Box2D\Dynamics\Joints">
       <UniqueIdentifier>{df179fb4-ca06-4398-83d3-15284c541970}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Core\Event">
+      <UniqueIdentifier>{cbd823aa-7160-4038-9773-b285f1a901f7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -255,6 +258,12 @@
     </ClCompile>
     <ClCompile Include="..\src\Game\System\PhysicsSystem.cpp">
       <Filter>src\Game\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Game\Component\BodyCom.cpp">
+      <Filter>src\Game\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Core\Event\EventWh.cpp">
+      <Filter>src\Core\Event</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -458,6 +467,12 @@
     </ClInclude>
     <ClInclude Include="..\src\Game\Component\PhysicsCom.h">
       <Filter>src\Game\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Game\Component\BodyCom.h">
+      <Filter>src\Game\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Core\Event\EventWh.h">
+      <Filter>src\Core\Event</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

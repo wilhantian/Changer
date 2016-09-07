@@ -83,6 +83,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Core\ECS\EntityFu.cpp" />
+    <ClCompile Include="..\src\Core\Event\EventWh.cpp" />
     <ClCompile Include="..\src\Core\GameState\GameState.cpp" />
     <ClCompile Include="..\src\Core\GameState\GameStateManager.cpp" />
     <ClCompile Include="..\src\Core\Game\Game.cpp" />
@@ -92,6 +93,7 @@
     <ClCompile Include="..\src\Core\Math\Rect.cpp" />
     <ClCompile Include="..\src\Core\Math\Size.cpp" />
     <ClCompile Include="..\src\Core\Math\Vector.cpp" />
+    <ClCompile Include="..\src\Game\Component\BodyCom.cpp" />
     <ClCompile Include="..\src\Game\Component\ComDefine.cpp" />
     <ClCompile Include="..\src\Game\GameState\TestState.cpp" />
     <ClCompile Include="..\src\Game\System\PhysicsSystem.cpp" />
@@ -151,6 +153,7 @@
   <ItemGroup>
     <ClInclude Include="..\src\Core\Base\utils.h" />
     <ClInclude Include="..\src\Core\ECS\EntityFu.h" />
+    <ClInclude Include="..\src\Core\Event\EventWh.h" />
     <ClInclude Include="..\src\Core\GameState\GameState.h" />
     <ClInclude Include="..\src\Core\GameState\GameStateManager.h" />
     <ClInclude Include="..\src\Core\Game\Game.h" />
@@ -160,6 +163,7 @@
     <ClInclude Include="..\src\Core\Math\Rect.h" />
     <ClInclude Include="..\src\Core\Math\Size.h" />
     <ClInclude Include="..\src\Core\Math\Vector.h" />
+    <ClInclude Include="..\src\Game\Component\BodyCom.h" />
     <ClInclude Include="..\src\Game\Component\ComDefine.h" />
     <ClInclude Include="..\src\Game\Component\PhysicsCom.h" />
     <ClInclude Include="..\src\Game\Component\PositionCom.h" />

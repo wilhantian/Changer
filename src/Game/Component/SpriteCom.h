@@ -20,6 +20,8 @@ struct SpriteCom : Entity::Component
 
 	SpriteType spriteType = SpriteType::None;
 	std::string filename;
+	float x;
+	float y;
 	int frameSize = 0;
 	int frameWidth = 0;
 	int frameHeight = 0;
