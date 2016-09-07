@@ -2,6 +2,9 @@
 #define _EVENT_WH_H_
 
 #include <functional>
+#include <string>
+#include <map>
+#include <vector>
 
 #define NAMESPACE_WH_BEGIN namespace wh{
 #define NAMESPAVE_WH_END }
@@ -11,27 +14,55 @@
 NAMESPACE_WH_BEGIN
 
 typedef unsigned Handle;
-typedef std::function<bool(const char*, void*)> Callback;
+typedef std::function<void(std::string, void*)> Callback;
 
+struct HandleData
+{
+	Handle handle;
+	Callback callback;
+	bool isOnce;
+
+	static Handle _gid;
+
+	HandleData(Callback callback, bool isOnce = false)
+		: callback(callback)
+		, handle(_gid++)
+		, isOnce(isOnce)
+	{
+	}
+};
+
+/// EventWh
 class Event
 {
 public:
-	static void init();
+	/// Subscribe to an event.
+	static Handle on(std::string name, Callback callback);
 
-	static void destroy();
+	/// Subscribe to an event and fire only once.
+	static Handle once(std::string name, Callback callback);
 
-public:
-	static Handle on(const char* name, Callback callback);
+	/// Remove an event callback.
+	static void off(std::string name, Handle handle);
 
-	static bool off(Handle handle);
+	/// Remove an all callback.
+	static void offAll(std::string name);
 
-	static bool off(Callback callback);
+	/// Clear all event.
+	static void clear();
 
-	static bool offAll();
+	/// Emit an event.
+	static void emit(std::string name, void* param);
 
-	static bool offAll(const char* name);
 
-	static void emit(const char* name, ...);
+private:
+	Event();
+	~Event();
+
+	std::map<std::string, std::vector<HandleData>> _handleDatas;
+
+private:
+	static Event _instance;
 };
 
 NAMESPAVE_WH_END
