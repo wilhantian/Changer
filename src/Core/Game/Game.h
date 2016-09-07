@@ -12,6 +12,7 @@ public:
     static void destoryInstance();
     
 public:
+    bool init();
 	void run();
     void stop();
     

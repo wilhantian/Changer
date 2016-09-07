@@ -5,6 +5,7 @@
 
 int main(int argc, char **argv)
 {
+    Game::getInstance()->init();
     GameStateManager::getInstance()->push(new TestState());
     Game::getInstance()->run();
     

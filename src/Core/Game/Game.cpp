@@ -37,19 +37,36 @@ void Game::destoryInstance()
         delete _instance;
 }
 
-void Game::run()
+bool Game::init()
 {
-	if (!al_init() || !al_init_image_addon() || !al_init_primitives_addon())
+    if (!al_init() || !al_init_image_addon() || !al_init_primitives_addon())
     {
         Logger::error("al init error");
-        return;
+        return false;
     }
-
+    
     if(!(_display = al_create_display(800, 600)))
     {
         Logger::error("al create display error");
-        return;
+        return false;
     }
+    
+    return true;
+}
+
+void Game::run()
+{
+//	if (!al_init() || !al_init_image_addon() || !al_init_primitives_addon())
+//    {
+//        Logger::error("al init error");
+//        return;
+//    }
+//
+//    if(!(_display = al_create_display(800, 600)))
+//    {
+//        Logger::error("al create display error");
+//        return;
+//    }
     
 	while (_isRunning)
 	{	

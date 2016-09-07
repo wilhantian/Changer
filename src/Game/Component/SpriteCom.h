@@ -40,6 +40,7 @@ struct SpriteCom : Entity::Component
 		: spriteType(SpriteType::Static)
 		, filename(filename)
 	{
+        loadBitmap();
 	}
 
 	/// Anime
@@ -53,12 +54,18 @@ struct SpriteCom : Entity::Component
 		, frameRate(frameRate)
 		, frameCol(frameCol)
 	{
+        loadBitmap();
 	}
 
 	virtual bool empty() const
 	{
 		return false;
 	}
+    
+    void loadBitmap()
+    {
+        bitmap = al_load_bitmap(filename.c_str());
+    }
 };
 
 #endif //_RENDER_COMP_H_
