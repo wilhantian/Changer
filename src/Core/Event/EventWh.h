@@ -19,9 +19,11 @@
 
 NAMESPACE_WH_BEGIN
 
+/// Event handler
 typedef unsigned Handler;
 typedef std::function<void(std::string, void*)> Callback;
 
+/// Event handler map
 struct HandlerData
 {
 	Handler handle;
@@ -33,6 +35,7 @@ struct HandlerData
 		, handle(_gid++)
         , isOnce(isOnce){}
     
+    /// private
     static Handler _gid;
 };
 

@@ -1,7 +1,9 @@
 #include "EventWh.h"
 
+/// wh::HandlerData
 wh::Handler wh::HandlerData::_gid = 0;
 
+/// wh::Event
 wh::Handler wh::Event::on(std::string name, Callback callback)
 {
 	HandlerData data(callback);

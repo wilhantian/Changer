@@ -1,7 +1,8 @@
 # EventWh
 Simple Event Library for C++11
+> EventWh used my game [Changer][1]
 
-
+----------
 
 
 # Quick Look
@@ -102,8 +103,8 @@ Event::clear();
 
 # License
 
-EventWh is distributed under the [MIT license][1].
+EventWh is distributed under the [MIT license][2].
 
--------------
 
 [1]: https://github.com/wilhantian/EventWh/blob/master/LICENSE
+[2]: https://github.com/wilhantian/Changer
