@@ -106,5 +106,5 @@ Event::clear();
 EventWh is distributed under the [MIT license][2].
 
 
-[1]: https://github.com/wilhantian/EventWh/blob/master/LICENSE
-[2]: https://github.com/wilhantian/Changer
+[1]: https://github.com/wilhantian/Changer
+[2]: https://github.com/wilhantian/EventWh/blob/master/LICENSE
