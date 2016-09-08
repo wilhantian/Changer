@@ -1,3 +1,9 @@
+///
+/// (EventWh)[https://github.com/wilhantian/EventWh]
+/// Simple Event Library for C++11
+/// Under the MIT license.
+///
+
 #ifndef _EVENT_WH_H_
 #define _EVENT_WH_H_
 
@@ -13,23 +19,21 @@
 
 NAMESPACE_WH_BEGIN
 
-typedef unsigned Handle;
+typedef unsigned Handler;
 typedef std::function<void(std::string, void*)> Callback;
 
-struct HandleData
+struct HandlerData
 {
-	Handle handle;
+	Handler handle;
 	Callback callback;
 	bool isOnce;
 
-	static Handle _gid;
-
-	HandleData(Callback callback, bool isOnce = false)
+	HandlerData(Callback callback, bool isOnce = false)
 		: callback(callback)
 		, handle(_gid++)
-		, isOnce(isOnce)
-	{
-	}
+        , isOnce(isOnce){}
+    
+    static Handler _gid;
 };
 
 /// EventWh
@@ -37,13 +41,13 @@ class Event
 {
 public:
 	/// Subscribe to an event.
-	static Handle on(std::string name, Callback callback);
+	static Handler on(std::string name, Callback callback);
 
 	/// Subscribe to an event and fire only once.
-	static Handle once(std::string name, Callback callback);
+	static Handler once(std::string name, Callback callback);
 
 	/// Remove an event callback.
-	static void off(std::string name, Handle handle);
+	static void off(std::string name, Handler handle);
 
 	/// Remove an all callback.
 	static void offAll(std::string name);
@@ -56,7 +60,7 @@ public:
 
 
 private:
-	static std::map<std::string, std::vector<HandleData>> _handleDatas;
+	static std::map<std::string, std::vector<HandlerData>> _handleDatas;
 };
 
 NAMESPAVE_WH_END

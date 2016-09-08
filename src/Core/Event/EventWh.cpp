@@ -1,26 +1,26 @@
 #include "EventWh.h"
 
-wh::Handle wh::HandleData::_gid = 0;
+wh::Handler wh::HandlerData::_gid = 0;
 
-wh::Handle wh::Event::on(std::string name, Callback callback)
+wh::Handler wh::Event::on(std::string name, Callback callback)
 {
-	HandleData data(callback);
+	HandlerData data(callback);
 	_handleDatas[name].push_back(data);
 	return data.handle;
 }
 
-wh::Handle wh::Event::once(std::string name, Callback callback)
+wh::Handler wh::Event::once(std::string name, Callback callback)
 {
-	HandleData data(callback, true);
+	HandlerData data(callback, true);
 	_handleDatas[name].push_back(data);
 	return data.handle;
 }
 
-void wh::Event::off(std::string name, Handle handle)
+void wh::Event::off(std::string name, Handler handle)
 {
 	auto& list = _handleDatas[name];
 
-	std::vector<HandleData>::iterator  it_pos;
+	std::vector<HandlerData>::iterator  it_pos;
 	for (it_pos = list.begin(); it_pos != list.end();)
 	{
 		if (it_pos->handle == handle)
@@ -43,10 +43,10 @@ void wh::Event::clear()
 }
 
 void wh::Event::emit(std::string name, void* param)
-{
+{   
 	auto& list = _handleDatas[name];
 
-	std::vector<HandleData>::iterator  it_pos;
+	std::vector<HandlerData>::iterator  it_pos;
 	for (it_pos = list.begin(); it_pos != list.end();)
 	{
 		auto& data = *it_pos;
@@ -62,4 +62,4 @@ void wh::Event::emit(std::string name, void* param)
 	}
 }
 
-std::map<std::string, std::vector<wh::HandleData>> wh::Event::_handleDatas;
+std::map<std::string, std::vector<wh::HandlerData>> wh::Event::_handleDatas;
