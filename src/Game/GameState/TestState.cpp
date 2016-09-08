@@ -14,6 +14,7 @@
 #include "Game/System/SpriteSystem.h"
 #include "Game/System/PhysicsSystem.h"
 #include "Game/Component/ComDefine.h"
+#include "Core/Event/EventWh.h"
 
 TestState::TestState()
 {

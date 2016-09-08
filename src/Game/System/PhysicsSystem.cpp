@@ -4,7 +4,7 @@
 #include "Box2D/Box2dRender.h"
 
 void PhysicsSystem::tick(double fixedDelta)
-{
+{   
 	auto all = Entity::getAll<PhysicsCom>();
 	for (Eid id : all)
 	{

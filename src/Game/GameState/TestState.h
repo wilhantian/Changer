@@ -18,7 +18,9 @@ class TestState : public GameState
 public:
 	TestState();
 	virtual ~TestState();
-
+    
+    int b;
+    
 public:
     virtual void update(float dt);
     virtual void draw();

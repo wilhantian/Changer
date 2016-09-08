@@ -1,41 +1,47 @@
 #include "EventWh.h"
 
-void wh::Event::init()
-{
-
-}
-
-void wh::Event::destroy()
-{
-
-}
+wh::Handle wh::HandleMap::_handleNum = 0;
 
 wh::Handle wh::Event::on(const char* name, Callback callback)
 {
-	return 0;
+    auto handler = HandleMap(callback);
+    _instance._handlers[name].push_back(handler);
+    return handler.handle;
 }
 
-bool wh::Event::off(Handle handle)
+bool wh::Event::off(Handle handle, const char* name)
 {
-	return false;
-}
-
-bool wh::Event::off(Callback callback)
-{
+    if(name)
+    {
+        for(auto handler : _instance._handlers[name])
+        {
+            if(handle == handler.handle){return true;}
+        }
+    }
 	return false;
 }
 
 bool wh::Event::offAll()
 {
+    _instance._handlers.clear();
 	return false;
 }
 
 bool wh::Event::offAll(const char* name)
 {
+    _instance._handlers[name].clear();
 	return false;
 }
 
 void wh::Event::emit(const char* name, ...)
 {
-
+    for (auto handler : _instance._handlers[name])
+    {
+        if(handler.callback(name, nullptr))
+        {
+            return;
+        }
+    }
 }
+
+wh::Event wh::Event::_instance = Event();

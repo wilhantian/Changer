@@ -20,6 +20,7 @@
 		8739A51D1D73F37500539BE9 /* ComDefine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8739A5081D73F37500539BE9 /* ComDefine.cpp */; settings = {ASSET_TAGS = (); }; };
 		8739A51E1D73F37500539BE9 /* TestState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8739A50D1D73F37500539BE9 /* TestState.cpp */; settings = {ASSET_TAGS = (); }; };
 		8739A51F1D73F37500539BE9 /* SpriteSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8739A5101D73F37500539BE9 /* SpriteSystem.cpp */; settings = {ASSET_TAGS = (); }; };
+		873EE6EE1D7FA1E700F5B37B /* EventWh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 873EE6EA1D7FA1E700F5B37B /* EventWh.cpp */; settings = {ASSET_TAGS = (); }; };
 		876918551D5813BC009918CB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 876918531D5813BC009918CB /* main.cpp */; settings = {ASSET_TAGS = (); }; };
 		876919101D588D71009918CB /* liballegro_acodec.5.0.11.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 876919041D588D71009918CB /* liballegro_acodec.5.0.11.dylib */; };
 		876919111D588D71009918CB /* liballegro_audio.5.0.11.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 876919051D588D71009918CB /* liballegro_audio.5.0.11.dylib */; };
@@ -127,6 +128,8 @@
 		8739A50E1D73F37500539BE9 /* TestState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestState.h; sourceTree = "<group>"; };
 		8739A5101D73F37500539BE9 /* SpriteSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteSystem.cpp; sourceTree = "<group>"; };
 		8739A5111D73F37500539BE9 /* SpriteSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteSystem.h; sourceTree = "<group>"; };
+		873EE6EA1D7FA1E700F5B37B /* EventWh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EventWh.cpp; sourceTree = "<group>"; };
+		873EE6EB1D7FA1E700F5B37B /* EventWh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventWh.h; sourceTree = "<group>"; };
 		876918491D581339009918CB /* Changer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Changer; sourceTree = BUILT_PRODUCTS_DIR; };
 		876918531D5813BC009918CB /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		876919041D588D71009918CB /* liballegro_acodec.5.0.11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_acodec.5.0.11.dylib; path = /usr/local/lib/liballegro_acodec.5.0.11.dylib; sourceTree = "<absolute>"; };
@@ -268,6 +271,7 @@
 		8739A4EA1D73F37500539BE9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				873EE6E81D7FA1E700F5B37B /* Event */,
 				8739A4EB1D73F37500539BE9 /* Base */,
 				8739A4ED1D73F37500539BE9 /* ECS */,
 				8739A4F11D73F37500539BE9 /* Game */,
@@ -396,6 +400,15 @@
 				8739A5111D73F37500539BE9 /* SpriteSystem.h */,
 			);
 			path = System;
+			sourceTree = "<group>";
+		};
+		873EE6E81D7FA1E700F5B37B /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				873EE6EA1D7FA1E700F5B37B /* EventWh.cpp */,
+				873EE6EB1D7FA1E700F5B37B /* EventWh.h */,
+			);
+			path = Event;
 			sourceTree = "<group>";
 		};
 		876918401D581339009918CB = {
@@ -720,6 +733,7 @@
 				8795118D1D790D02004CAB0E /* b2WheelJoint.cpp in Sources */,
 				8739A51E1D73F37500539BE9 /* TestState.cpp in Sources */,
 				879511711D790D02004CAB0E /* b2StackAllocator.cpp in Sources */,
+				873EE6EE1D7FA1E700F5B37B /* EventWh.cpp in Sources */,
 				879511881D790D02004CAB0E /* b2PrismaticJoint.cpp in Sources */,
 				876918551D5813BC009918CB /* main.cpp in Sources */,
 				8739A5141D73F37500539BE9 /* EntityFu.cpp in Sources */,
