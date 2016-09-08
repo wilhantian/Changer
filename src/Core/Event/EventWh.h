@@ -56,13 +56,7 @@ public:
 
 
 private:
-	Event();
-	~Event();
-
-	std::map<std::string, std::vector<HandleData>> _handleDatas;
-
-private:
-	static Event _instance;
+	static std::map<std::string, std::vector<HandleData>> _handleDatas;
 };
 
 NAMESPAVE_WH_END
