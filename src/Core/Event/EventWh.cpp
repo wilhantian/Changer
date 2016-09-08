@@ -1,47 +1,73 @@
 #include "EventWh.h"
 
-wh::Handle wh::HandleMap::_handleNum = 0;
+wh::Handle wh::HandleData::_gid = 0;
 
-wh::Handle wh::Event::on(const char* name, Callback callback)
+wh::Handle wh::Event::on(std::string name, Callback callback)
 {
-    auto handler = HandleMap(callback);
-    _instance._handlers[name].push_back(handler);
-    return handler.handle;
+	HandleData data(callback);
+	_instance._handleDatas[name].push_back(data);
+	return data.handle;
 }
 
-bool wh::Event::off(Handle handle, const char* name)
+wh::Handle wh::Event::once(std::string name, Callback callback)
 {
-    if(name)
-    {
-        for(auto handler : _instance._handlers[name])
-        {
-            if(handle == handler.handle){return true;}
-        }
-    }
-	return false;
+	HandleData data(callback, true);
+	_instance._handleDatas[name].push_back(data);
+	return data.handle;
 }
 
-bool wh::Event::offAll()
+void wh::Event::off(std::string name, Handle handle)
 {
-    _instance._handlers.clear();
-	return false;
+	auto& list = _instance._handleDatas[name];
+
+	std::vector<HandleData>::iterator  it_pos;
+	for (it_pos = list.begin(); it_pos != list.end();)
+	{
+		if (it_pos->handle == handle)
+		{
+			list.erase(it_pos);
+			return;
+		}
+		it_pos++;
+	}
 }
 
-bool wh::Event::offAll(const char* name)
+void wh::Event::offAll(std::string name)
 {
-    _instance._handlers[name].clear();
-	return false;
+	_instance._handleDatas[name].clear();
 }
 
-void wh::Event::emit(const char* name, ...)
+void wh::Event::clear()
 {
-    for (auto handler : _instance._handlers[name])
-    {
-        if(handler.callback(name, nullptr))
-        {
-            return;
-        }
-    }
+	_instance._handleDatas.clear();
+}
+
+void wh::Event::emit(std::string name, void* param)
+{
+	auto& list = _instance._handleDatas[name];
+
+	std::vector<HandleData>::iterator  it_pos;
+	for (it_pos = list.begin(); it_pos != list.end();)
+	{
+		auto& data = *it_pos;
+		data.callback(name, param);
+		if (data.isOnce)
+		{
+			it_pos = list.erase(it_pos);
+		}
+		else
+		{
+			it_pos++;
+		}
+	}
+}
+
+wh::Event::Event()
+{
+}
+
+wh::Event::~Event()
+{
 }
 
 wh::Event wh::Event::_instance = Event();

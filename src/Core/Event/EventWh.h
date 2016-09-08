@@ -3,8 +3,8 @@
 
 #include <functional>
 #include <string>
-#include <vector>
 #include <map>
+#include <vector>
 
 #define NAMESPACE_WH_BEGIN namespace wh{
 #define NAMESPAVE_WH_END }
@@ -13,51 +13,56 @@
 
 NAMESPACE_WH_BEGIN
 
-typedef std::function<bool(const char*, void*)> Callback;
 typedef unsigned Handle;
-typedef int Index;
+typedef std::function<void(std::string, void*)> Callback;
 
-struct HandleMap{
-    static Handle _handleNum;
-    
-    Callback callback;
-    Handle handle;
-    Index index;
-    
-    HandleMap(Callback callback, Index index = 0)
-    : callback(callback)
-    , index(index)
-    {
-        handle = _handleNum++;
-    }
+struct HandleData
+{
+	Handle handle;
+	Callback callback;
+	bool isOnce;
+
+	static Handle _gid;
+
+	HandleData(Callback callback, bool isOnce = false)
+		: callback(callback)
+		, handle(_gid++)
+		, isOnce(isOnce)
+	{
+	}
 };
 
+/// EventWh
 class Event
 {
 public:
-    static void pause();
-    
-    static void resume();
+	/// Subscribe to an event.
+	static Handle on(std::string name, Callback callback);
 
-public:
-	static Handle on(const char* name, Callback callback);
-    
-    static Handle onOnce(const char* name, Callback callback);
+	/// Subscribe to an event and fire only once.
+	static Handle once(std::string name, Callback callback);
 
-	static bool off(Handle handle, const char* name = nullptr);
+	/// Remove an event callback.
+	static void off(std::string name, Handle handle);
 
-    
-	static bool offAll();
+	/// Remove an all callback.
+	static void offAll(std::string name);
 
-	static bool offAll(const char* name);
+	/// Clear all event.
+	static void clear();
 
-	
-    static void emit(const char* name, ...);
-    
-protected:
-    std::map<std::string, std::vector<HandleMap>> _handlers;
-    
-    static Event _instance;
+	/// Emit an event.
+	static void emit(std::string name, void* param);
+
+
+private:
+	Event();
+	~Event();
+
+	std::map<std::string, std::vector<HandleData>> _handleDatas;
+
+private:
+	static Event _instance;
 };
 
 NAMESPAVE_WH_END
