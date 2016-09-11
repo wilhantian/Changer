@@ -95,6 +95,7 @@
     <ClCompile Include="..\src\Core\Math\Vector.cpp" />
     <ClCompile Include="..\src\Game\Component\BodyCom.cpp" />
     <ClCompile Include="..\src\Game\Component\ComDefine.cpp" />
+    <ClCompile Include="..\src\Game\Component\SpriteCom.cpp" />
     <ClCompile Include="..\src\Game\GameState\TestState.cpp" />
     <ClCompile Include="..\src\Game\System\PhysicsSystem.cpp" />
     <ClCompile Include="..\src\Game\System\SpriteSystem.cpp" />

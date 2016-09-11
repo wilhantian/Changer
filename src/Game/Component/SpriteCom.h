@@ -19,6 +19,7 @@ struct SpriteCom : Entity::Component
 	CREATE_CID;
 
 	SpriteType spriteType = SpriteType::None;
+	ALLEGRO_BITMAP* bitmap = nullptr;
 	std::string filename;
 	float x;
 	float y;
@@ -27,47 +28,20 @@ struct SpriteCom : Entity::Component
 	int frameHeight = 0;
 	int frameCol = 0;
 	float frameRate = 0;
-
 	float curFrameDelay = 0;
 	int curFrame = 0;
-	ALLEGRO_BITMAP* bitmap = nullptr;
     
-	SpriteCom()
-		: spriteType(SpriteType::None)
-	{
-	}
+	SpriteCom();
 
 	/// Static
-	SpriteCom(std::string filename)
-		: spriteType(SpriteType::Static)
-		, filename(filename)
-	{
-        loadBitmap();
-	}
+	SpriteCom(std::string filename);
 
 	/// Anime
 	SpriteCom(std::string filename
-			, int frameSize, int frameWidth, int frameHeight, float frameRate, int frameCol)
-		: spriteType(SpriteType::Anime)
-		, filename(filename)
-		, frameSize(frameSize)
-		, frameWidth(frameWidth)
-		, frameHeight(frameHeight)
-		, frameRate(frameRate)
-		, frameCol(frameCol)
-	{
-        loadBitmap();
-	}
+		, int frameSize, int frameWidth, int frameHeight, float frameRate, int frameCol);
 
-	virtual bool empty() const
-	{
-		return false;
-	}
-    
-    void loadBitmap()
-    {
-        bitmap = al_load_bitmap(filename.c_str());
-    }
+	virtual bool empty() const;
+   
 };
 
 #endif //_RENDER_COMP_H_

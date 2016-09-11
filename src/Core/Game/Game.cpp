@@ -3,6 +3,7 @@
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_image.h>
 #include <allegro5/allegro_primitives.h>
+
 #include "Core/Logger/Logger.h"
 #include "Core/GameState/GameState.h"
 #include "Core/GameState/GameStateManager.h"
@@ -55,19 +56,7 @@ bool Game::init()
 }
 
 void Game::run()
-{
-//	if (!al_init() || !al_init_image_addon() || !al_init_primitives_addon())
-//    {
-//        Logger::error("al init error");
-//        return;
-//    }
-//
-//    if(!(_display = al_create_display(800, 600)))
-//    {
-//        Logger::error("al create display error");
-//        return;
-//    }
-    
+{   
 	while (_isRunning)
 	{	
 		if (_isNeedUpdate())

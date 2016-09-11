@@ -265,6 +265,9 @@
     <ClCompile Include="..\src\Core\Event\EventWh.cpp">
       <Filter>src\Core\Event</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Game\Component\SpriteCom.cpp">
+      <Filter>src\Game\Component</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

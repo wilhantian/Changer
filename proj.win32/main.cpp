@@ -10,6 +10,8 @@
 
 int main()
 {
+	Game::getInstance()->init();
+
 	GameStateManager::getInstance()->push(new TestState());
 
 	Game::getInstance()->run();

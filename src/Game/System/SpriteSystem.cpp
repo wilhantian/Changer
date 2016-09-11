@@ -11,8 +11,14 @@ void SpriteSystem::tick(double fixedDelta)
         SpriteCom& sprite = e.sprite;
 		PositionCom& position = e.position;
 
+		if (sprite.bitmap == nullptr)
+		{
+			sprite.bitmap = al_load_bitmap(sprite.filename.c_str());
+		}
+
 		if (sprite.bitmap == nullptr)//not init bitmap
 		{
+			//Logger::error("bitmap is null");
             continue;
 		}
 
