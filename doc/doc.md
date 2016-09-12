@@ -8,4 +8,5 @@ Component
 - Sprite (images)
 - Heath (value)
 - Player (null)
-- Physics (body)
+- ~~Physics (body)~~
+- Body (body)

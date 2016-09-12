@@ -8,18 +8,16 @@
 #define REGISTER_COM_BEGIN System::Ent::Ent(Eid _id):
 #define REGISTER_COM_ENG id(_id){}
 
-/// 定义组件
+/// define component
 DEFINE_COM_BEGIN
-DEFINE_COM(SpriteCom)
 DEFINE_COM(PositionCom)
-DEFINE_COM(PhysicsCom)
-DEFINE_COM(BodyCom)
+DEFINE_COM(VelocityCom)
+DEFINE_COM(SpriteCom)
 DEFINE_COM_END
 
-/// 注册组件
+/// register component
 REGISTER_COM_BEGIN
-REGISTER_COM(SpriteCom, sprite)
 REGISTER_COM(PositionCom, position)
-REGISTER_COM(PhysicsCom, physics)
-REGISTER_COM(BodyCom, body)
+REGISTER_COM(VelocityCom, velocity)
+REGISTER_COM(SpriteCom, sprite)
 REGISTER_COM_ENG

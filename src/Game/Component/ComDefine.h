@@ -2,21 +2,18 @@
 #define _COM_DEFINE_H_
 
 #include "Core/ECS/EntityFu.h"
-#include "SpriteCom.h"
-#include "PositionCom.h"
-#include "PhysicsCom.h"
-#include "BodyCom.h"
+#include "Game/Component/PositionCom.h"
+#include "Game/Component/VelocityCom.h"
+#include "Game/Component/SpriteCom.h"
 
-/// 组件在.cpp中注册
-/// 预定义系统组件
+/// please register in .cpp
 struct System::Ent
 {
 	Eid id;
 	// BEGIN
-	SpriteCom& sprite;
 	PositionCom& position;
-	PhysicsCom& physics;
-	BodyCom& body;
+	VelocityCom& velocity;
+	SpriteCom& sprite;
 	// END
 
 	Ent(Eid _id);

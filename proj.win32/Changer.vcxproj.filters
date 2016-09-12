@@ -106,9 +106,6 @@
     <ClCompile Include="..\src\Core\Grapics\Sprite.cpp">
       <Filter>src\Core\Grapics</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Game\System\SpriteSystem.cpp">
-      <Filter>src\Game\System</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\Game\Component\ComDefine.cpp">
       <Filter>src\Game\Component</Filter>
     </ClCompile>
@@ -256,17 +253,8 @@
     <ClCompile Include="..\third-party\Box2D\Dynamics\b2Island.cpp">
       <Filter>third-party\Box2D\Dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Game\System\PhysicsSystem.cpp">
-      <Filter>src\Game\System</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Game\Component\BodyCom.cpp">
-      <Filter>src\Game\Component</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\Core\Event\EventWh.cpp">
       <Filter>src\Core\Event</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Game\Component\SpriteCom.cpp">
-      <Filter>src\Game\Component</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -307,15 +295,6 @@
       <Filter>src\Core\Grapics</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Game\Component\ComDefine.h">
-      <Filter>src\Game\Component</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Game\Component\SpriteCom.h">
-      <Filter>src\Game\Component</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Game\System\SpriteSystem.h">
-      <Filter>src\Game\System</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Game\Component\PositionCom.h">
       <Filter>src\Game\Component</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Core\Grapics\Grapics.h">
@@ -465,17 +444,17 @@
     <ClInclude Include="..\third-party\Box2D\Dynamics\b2Fixture.h">
       <Filter>third-party\Box2D\Dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Game\System\PhysicsSystem.h">
-      <Filter>src\Game\System</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Game\Component\PhysicsCom.h">
-      <Filter>src\Game\Component</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Game\Component\BodyCom.h">
-      <Filter>src\Game\Component</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Core\Event\EventWh.h">
       <Filter>src\Core\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Game\Component\PositionCom.h">
+      <Filter>src\Game\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Game\Component\VelocityCom.h">
+      <Filter>src\Game\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Game\Component\SpriteCom.h">
+      <Filter>src\Game\Component</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

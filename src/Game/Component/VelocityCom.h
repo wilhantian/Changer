@@ -1,24 +1,25 @@
 #include "Core/ECS/EntityFu.h"
+#include <math.h>
 
-/// Position Component
-struct PositionCom : Entity::Component
+/// Velocity Component
+struct VelocityCom : Entity::Component
 {
 	CREATE_CID;
 
 	float x;
 	float y;
-
+	
 	bool _empty;
 
-	PositionCom()
-		: PositionCom(0, 0)
+	VelocityCom()
+		: VelocityCom(0, 0)
 	{
 		_empty = true;
 	}
 
-	PositionCom(float x, float y)
+	VelocityCom(float x, float y)
 		: x(x)
-		, y(y) 
+		, y(y)
 	{
 		_empty = false;
 	}

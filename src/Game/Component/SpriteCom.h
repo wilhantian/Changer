@@ -1,47 +1,68 @@
-#ifndef _RENDER_COMP_H_
-#define _RENDER_COMP_H_
-
-#include <vector>
-#include <string>
-#include <allegro5/allegro.h>
-#include <allegro5/allegro_image.h>
 #include "Core/ECS/EntityFu.h"
 
-enum SpriteType
-{
-	None,
-	Static,//just have one image/frames
-	Anime//have some frame
-};
+#include <allegro5/allegro5.h>
+#include <vector>
 
 struct SpriteCom : Entity::Component
 {
 	CREATE_CID;
 
-	SpriteType spriteType = SpriteType::None;
-	ALLEGRO_BITMAP* bitmap = nullptr;
+	int size;
+	int index;
+	int rate;
+	int width;
+	int height;
 	std::string filename;
-	float x;
-	float y;
-	int frameSize = 0;
-	int frameWidth = 0;
-	int frameHeight = 0;
-	int frameCol = 0;
-	float frameRate = 0;
-	float curFrameDelay = 0;
-	int curFrame = 0;
-    
-	SpriteCom();
+	ALLEGRO_BITMAP* curFrame;
+	std::vector<ALLEGRO_BITMAP*> frames;
 
-	/// Static
-	SpriteCom(std::string filename);
+	SpriteCom()
+		: SpriteCom("", 0, 0, 0, 0)
+	{
+	}
 
-	/// Anime
-	SpriteCom(std::string filename
-		, int frameSize, int frameWidth, int frameHeight, float frameRate, int frameCol);
+	SpriteCom(std::string filename, int size, int rate, int width, int height, int index = 0)
+		: filename(filename)
+		, size(size)
+		, rate(rate)
+		, width(width)
+		, height(height)
+		, index(index)
+	{
+		if (filename.empty() || size <= 0 || width <= 0 || height <= 0 || index < 0)
+			return;
 
-	virtual bool empty() const;
-   
+		ALLEGRO_BITMAP* texture = al_load_bitmap(filename.c_str());	
+
+		if (!texture)
+			return;
+
+		int tw = al_get_bitmap_width(texture);
+		int th = al_get_bitmap_height(texture);
+		int col = tw / width;
+		int row = th / height;
+
+		for (int i = 0; i < size; i++)
+		{
+			ALLEGRO_BITMAP* frame = al_create_sub_bitmap(
+				texture, 
+				i % col, i / row, //TODO
+				width, height);
+			frames.push_back(frame);
+		}
+	}
+
+	~SpriteCom()
+	{
+// 		if (texture)
+// 		{
+// 			al_destroy_bitmap(texture);
+// 			texture = NULL;
+// 		}
+	}
+
+	virtual bool empty() const
+	{
+		return frames.size() == 0;
+	}
 };
-
-#endif //_RENDER_COMP_H_
