@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		870CF9FE1D866E7900C62EBA /* SpriteCom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 870CF9FB1D866E7900C62EBA /* SpriteCom.cpp */; settings = {ASSET_TAGS = (); }; };
+		870CF9FF1D866E7900C62EBA /* BodyCom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 870CF9FC1D866E7900C62EBA /* BodyCom.cpp */; settings = {ASSET_TAGS = (); }; };
 		870E44D41D7CFC4E0060A5B4 /* PhysicsSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 870E44D21D7CFC4E0060A5B4 /* PhysicsSystem.cpp */; settings = {ASSET_TAGS = (); }; };
 		8739A5141D73F37500539BE9 /* EntityFu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8739A4EE1D73F37500539BE9 /* EntityFu.cpp */; settings = {ASSET_TAGS = (); }; };
 		8739A5151D73F37500539BE9 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8739A4F21D73F37500539BE9 /* Game.cpp */; settings = {ASSET_TAGS = (); }; };
@@ -98,6 +100,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		870CF9FB1D866E7900C62EBA /* SpriteCom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteCom.cpp; sourceTree = "<group>"; };
+		870CF9FC1D866E7900C62EBA /* BodyCom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BodyCom.cpp; sourceTree = "<group>"; };
+		870CF9FD1D866E7900C62EBA /* BodyCom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodyCom.h; sourceTree = "<group>"; };
 		870E44D21D7CFC4E0060A5B4 /* PhysicsSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhysicsSystem.cpp; sourceTree = "<group>"; };
 		870E44D31D7CFC4E0060A5B4 /* PhysicsSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsSystem.h; sourceTree = "<group>"; };
 		870E44D51D7CFC580060A5B4 /* PhysicsCom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsCom.h; sourceTree = "<group>"; };
@@ -366,10 +371,13 @@
 		8739A5071D73F37500539BE9 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				870E44D51D7CFC580060A5B4 /* PhysicsCom.h */,
-				87950FD01D7541E6004CAB0E /* PositionCom.h */,
+				870CF9FC1D866E7900C62EBA /* BodyCom.cpp */,
+				870CF9FD1D866E7900C62EBA /* BodyCom.h */,
 				8739A5081D73F37500539BE9 /* ComDefine.cpp */,
 				8739A5091D73F37500539BE9 /* ComDefine.h */,
+				870E44D51D7CFC580060A5B4 /* PhysicsCom.h */,
+				87950FD01D7541E6004CAB0E /* PositionCom.h */,
+				870CF9FB1D866E7900C62EBA /* SpriteCom.cpp */,
 				8739A50A1D73F37500539BE9 /* SpriteCom.h */,
 			);
 			path = Component;
@@ -711,6 +719,7 @@
 				8739A51C1D73F37500539BE9 /* Vector.cpp in Sources */,
 				879511801D790D02004CAB0E /* b2PolygonAndCircleContact.cpp in Sources */,
 				879511621D790D02004CAB0E /* b2CollideCircle.cpp in Sources */,
+				870CF9FE1D866E7900C62EBA /* SpriteCom.cpp in Sources */,
 				8795117B1D790D02004CAB0E /* b2CircleContact.cpp in Sources */,
 				879511871D790D02004CAB0E /* b2MouseJoint.cpp in Sources */,
 				879511611D790D02004CAB0E /* b2BroadPhase.cpp in Sources */,
@@ -724,6 +733,7 @@
 				8795116B1D790D02004CAB0E /* b2EdgeShape.cpp in Sources */,
 				879511791D790D02004CAB0E /* b2ChainAndCircleContact.cpp in Sources */,
 				8739A5161D73F37500539BE9 /* GameState.cpp in Sources */,
+				870CF9FF1D866E7900C62EBA /* BodyCom.cpp in Sources */,
 				879511651D790D02004CAB0E /* b2Collision.cpp in Sources */,
 				8739A5181D73F37500539BE9 /* Sprite.cpp in Sources */,
 				8795116A1D790D02004CAB0E /* b2CircleShape.cpp in Sources */,
