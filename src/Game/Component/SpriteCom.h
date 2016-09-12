@@ -40,13 +40,12 @@ struct SpriteCom : Entity::Component
 		int tw = al_get_bitmap_width(texture);
 		int th = al_get_bitmap_height(texture);
 		int col = tw / width;
-		int row = th / height;
 
 		for (int i = 0; i < size; i++)
 		{
 			ALLEGRO_BITMAP* frame = al_create_sub_bitmap(
 				texture, 
-				i % col, i / row, //TODO
+				i % col, i / col,
 				width, height);
 			frames.push_back(frame);
 		}
