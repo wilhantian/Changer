@@ -16,6 +16,9 @@ struct SpriteCom : Entity::Component
 	ALLEGRO_BITMAP* curFrame;
 	std::vector<ALLEGRO_BITMAP*> frames;
 
+	float delay;
+	ALLEGRO_BITMAP* texture;
+
 	SpriteCom()
 		: SpriteCom("", 0, 0, 0, 0)
 	{
@@ -28,11 +31,12 @@ struct SpriteCom : Entity::Component
 		, width(width)
 		, height(height)
 		, index(index)
+		, delay(0)
 	{
 		if (filename.empty() || size <= 0 || width <= 0 || height <= 0 || index < 0)
 			return;
 
-		ALLEGRO_BITMAP* texture = al_load_bitmap(filename.c_str());	
+		texture = al_load_bitmap(filename.c_str());	
 
 		if (!texture)
 			return;
@@ -45,19 +49,21 @@ struct SpriteCom : Entity::Component
 		{
 			ALLEGRO_BITMAP* frame = al_create_sub_bitmap(
 				texture, 
-				i % col, i / col,
+				i % col * width, i / col * height,
 				width, height);
 			frames.push_back(frame);
 		}
+
+		curFrame = frames[index];
 	}
 
 	~SpriteCom()
 	{
-// 		if (texture)
-// 		{
-// 			al_destroy_bitmap(texture);
-// 			texture = NULL;
-// 		}
+		for (auto frame : frames)
+		{
+			al_destroy_bitmap(frame);
+		}
+		al_destroy_bitmap(texture);
 	}
 
 	virtual bool empty() const

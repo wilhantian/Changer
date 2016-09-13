@@ -8,6 +8,8 @@
 #include "Core/GameState/GameState.h"
 #include "Core/GameState/GameStateManager.h"
 
+#include "Box2D/Box2dRender.h"
+
 Game::Game():
 _isRunning(true),
 _gameDelay(1.0/60.0),
@@ -20,7 +22,8 @@ _lastUpdateTime(0)
 
 Game::~Game()
 {
-
+	delete _world;
+	_world = nullptr;
 }
 
 Game* Game::getInstance()
@@ -51,6 +54,17 @@ bool Game::init()
         Logger::error("al create display error");
         return false;
     }
+
+	_world = new b2World(b2Vec2(0, 0));
+	Box2dRender* debugDraw = new Box2dRender();
+	uint32 flags = 0;
+	flags += b2Draw::e_shapeBit;
+	flags += b2Draw::e_jointBit;  
+	//flags += b2Draw::e_aabbBit;  
+	//flags += b2Draw::e_pairBit;  
+	//flags += b2Draw::e_centerOfMassBit;  
+	debugDraw->SetFlags(flags);
+	_world->SetDebugDraw(debugDraw);
     
     return true;
 }
@@ -92,6 +106,11 @@ bool Game::_isNeedUpdate()
 		return false;
 	}
 	
+}
+
+b2World* Game::getWorld()
+{
+	return _world;
 }
 
 Game* Game::_instance = nullptr;

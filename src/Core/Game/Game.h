@@ -1,6 +1,8 @@
 #ifndef _GAME_H_
 #define _GAME_H_
 
+#include "Box2D/Box2D.h"
+
 struct ALLEGRO_DISPLAY;
 
 class Game
@@ -16,6 +18,8 @@ public:
 	void run();
     void stop();
     
+	b2World* getWorld();
+
 protected:
 	bool _isNeedUpdate();
 
@@ -27,6 +31,7 @@ protected:
 	float _lastUpdateTime;
 	bool  _isRunning;
     ALLEGRO_DISPLAY* _display;
+	b2World* _world;
 };
 
 #endif
