@@ -4,11 +4,11 @@
 
 void PhysicsSystem::tick(double fixedDelta)
 {
-	auto all = Entity::getAll<PhysicsCom>();
+	auto all = Entity::getAll<CollisionCom>();
 	for (Eid id : all)
 	{
 		Ent e(id);
-		PhysicsCom& physics = e.physics;
+		CollisionCom& physics = e.physics;
 		VelocityCom& velocity = e.velocity;
 
 		IF_COM_NULL_CONTINUE(physics);

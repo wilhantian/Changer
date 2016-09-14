@@ -2,6 +2,7 @@
 
 #include <allegro5/allegro5.h>
 #include <vector>
+#include <string>
 
 struct SpriteCom : Entity::Component
 {
@@ -42,7 +43,6 @@ struct SpriteCom : Entity::Component
 			return;
 
 		int tw = al_get_bitmap_width(texture);
-		int th = al_get_bitmap_height(texture);
 		int col = tw / width;
 
 		for (int i = 0; i < size; i++)

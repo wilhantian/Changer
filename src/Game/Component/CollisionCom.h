@@ -4,18 +4,18 @@
 #include "Core/ECS/EntityFu.h"
 #include "Box2D/Box2D.h"
 
-struct PhysicsCom : Entity::Component
+struct CollisionCom : Entity::Component
 {
 	CREATE_CID;
 
 	b2Body* body;
 
-	PhysicsCom()
+	CollisionCom()
 		: body(nullptr)
 	{
 	}
 
-	PhysicsCom(b2Body* body)
+	CollisionCom(b2Body* body)
 		: body(body)
 	{
 	}

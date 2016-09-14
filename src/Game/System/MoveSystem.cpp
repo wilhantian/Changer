@@ -10,7 +10,7 @@ void MoveSystem::tick(double fixedDelta)
 		Ent e(id);
 		VelocityCom& velocity = e.velocity;
 		PositionCom& position = e.position;
-		PhysicsCom& physics = e.physics;
+		CollisionCom& physics = e.physics;
 
 		IF_COM_NULL_CONTINUE(velocity);
 		IF_COM_NULL_CONTINUE(position);

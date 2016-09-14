@@ -7,7 +7,8 @@
 #include "Game/Component/PositionCom.h"
 #include "Game/Component/VelocityCom.h"
 #include "Game/Component/SpriteCom.h"
-#include "Game/Component/PhysicsCom.h"
+#include "Game/Component/CollisionCom.h"
+#include "Game/Component/PlayerCom.h"
 
 /// please register in .cpp
 struct System::Ent
@@ -17,7 +18,8 @@ struct System::Ent
 	PositionCom& position;
 	VelocityCom& velocity;
 	SpriteCom& sprite;
-	PhysicsCom& physics;
+	CollisionCom& physics;
+    PlayerCom& player;
 	// END
 
 	Ent(Eid _id);

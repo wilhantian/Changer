@@ -35,9 +35,9 @@ TestState::TestState()
 		b2Body* body = world->CreateBody(&spriteBodyDef);
 		body->CreateFixture(&bodyFixture);                            //将Body与夹具（Fixtrure）绑定  
 
-		PhysicsCom* physics = new PhysicsCom(body);
+		CollisionCom* physics = new CollisionCom(body);
 
-		Entity::create(new VelocityCom(50, 50), new SpriteCom("E:/Changer/res/Sprite-0001.png", 2, 12, 45, 45), new PositionCom(100, 100), physics);
+		Entity::create(new VelocityCom(50, 50), new SpriteCom("/Users/wilhantian/Dev/WorkSpace/Changer/res/Sprite-0001.png", 2, 12, 45, 45), new PositionCom(100, 100), physics, new PlayerCom(true));
 	}
 	
 	{
@@ -53,9 +53,9 @@ TestState::TestState()
 		b2Body* body = world->CreateBody(&spriteBodyDef);
 		body->CreateFixture(&bodyFixture);                            //将Body与夹具（Fixtrure）绑定  
 
-		PhysicsCom* physics = new PhysicsCom(body);
+		CollisionCom* physics = new CollisionCom(body);
 
-		Entity::create(new VelocityCom(-50, -50), new SpriteCom("E:/Changer/res/Sprite-0001.png", 2, 12, 45, 45), new PositionCom(100, 100), physics);
+		Entity::create(new VelocityCom(-50, -50), new SpriteCom("/Users/wilhantian/Dev/WorkSpace/Changer/res/Sprite-0001.png", 2, 12, 45, 45), new PositionCom(100, 100), physics);
 	}
 }
 
