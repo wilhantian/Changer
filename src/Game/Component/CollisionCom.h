@@ -2,27 +2,28 @@
 #define _COLLISION_COM_H_
 
 #include "Core/ECS/EntityFu.h"
-#include "Box2D/Box2D.h"
+#include "Core/Math/Size.h"
 
 struct CollisionCom : Entity::Component
 {
 	CREATE_CID;
 
-	b2Body* body;
+	Size size;
+	int filterCategory;
+	int filterMask;
+
+	CollisionCom(const Size& size, int filterCategory, int filterMask)
+		: size(size)
+		, filterCategory(filterCategory)
+		, filterMask(filterMask){}
 
 	CollisionCom()
-		: body(nullptr)
-	{
-	}
-
-	CollisionCom(b2Body* body)
-		: body(body)
-	{
-	}
+		: size(0, 0)
+		, filterCategory(0)
+		, filterMask(0){}
 
 	virtual bool empty() const
 	{
-		return body == nullptr;
 	}
 };
 
