@@ -13,6 +13,14 @@ struct MoveCom : Entity::Component
 	kDirection direction;
 	Vector position;
 
+	MoveCom(float speed, kDirection direction, Vector position)
+		: speed(speed)
+		, direction(direction)
+		, position(position){}
+
+	MoveCom()
+		: MoveCom(speed, direction, position){}
+
 	virtual bool empty() const
 	{
 		return false;
