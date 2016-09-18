@@ -256,15 +256,6 @@
     <ClCompile Include="..\src\Core\Event\EventWh.cpp">
       <Filter>src\Core\Event</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Game\System\RenderSystem.cpp">
-      <Filter>src\Game\System</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Game\System\MoveSystem.cpp">
-      <Filter>src\Game\System</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Game\System\PhysicsSystem.cpp">
-      <Filter>src\Game\System</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -456,26 +447,17 @@
     <ClInclude Include="..\src\Core\Event\EventWh.h">
       <Filter>src\Core\Event</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Game\Component\PositionCom.h">
+    <ClInclude Include="..\src\Game\Component\RenderCom.h">
       <Filter>src\Game\Component</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Game\Component\VelocityCom.h">
+    <ClInclude Include="..\src\Game\Component\MoveCom.h">
       <Filter>src\Game\Component</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Game\Component\SpriteCom.h">
+    <ClInclude Include="..\src\Game\Component\CollisionCom.h">
       <Filter>src\Game\Component</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Game\System\RenderSystem.h">
-      <Filter>src\Game\System</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Game\System\MoveSystem.h">
-      <Filter>src\Game\System</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Game\System\PhysicsSystem.h">
-      <Filter>src\Game\System</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Game\Component\PhysicsCom.h">
-      <Filter>src\Game\Component</Filter>
+    <ClInclude Include="..\src\Game\common.h">
+      <Filter>src\Game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
