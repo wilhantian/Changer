@@ -1,6 +1,5 @@
 #include "Game.h"
 
-#include <allegro5/allegro.h>
 #include <allegro5/allegro_image.h>
 #include <allegro5/allegro_primitives.h>
 
@@ -15,7 +14,8 @@ _isRunning(true),
 _gameDelay(1.0/60.0),
 _curDelay(0),
 _nowTime(0),
-_lastUpdateTime(0)
+_lastUpdateTime(0),
+_eventQueue(nullptr)
 {
 
 }
@@ -43,7 +43,7 @@ void Game::destoryInstance()
 
 bool Game::init()
 {
-    if (!al_init() || !al_init_image_addon() || !al_init_primitives_addon())
+    if (!al_init() || !al_init_image_addon() || !al_init_primitives_addon() || !al_install_keyboard())
     {
         Logger::error("al init error");
         return false;
@@ -65,6 +65,9 @@ bool Game::init()
 	//flags += b2Draw::e_centerOfMassBit;  
 	debugDraw->SetFlags(flags);
 	_world->SetDebugDraw(debugDraw);
+    
+    // events queue
+    _initEventQueue();
     
     return true;
 }
@@ -105,7 +108,20 @@ bool Game::_isNeedUpdate()
 		al_rest(0);
 		return false;
 	}
-	
+}
+
+bool Game::_initEventQueue()
+{
+    _eventQueue = al_create_event_queue();
+    
+    if(!_eventQueue)
+    {
+        return false;
+    }
+    
+    al_register_event_source(_eventQueue, al_get_display_event_source(_display));
+    
+    return true;
 }
 
 b2World* Game::getWorld()

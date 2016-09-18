@@ -17,6 +17,7 @@
 #include "Game/System/RenderSystem.h"
 #include "Game/System/MoveSystem.h"
 #include "Game/System/PhysicsSystem.h"
+#include "Game/System/ControllerSystem.h"
 
 TestState::TestState()
 {
@@ -66,11 +67,10 @@ TestState::~TestState()
 
 void TestState::update(float dt)
 {
+    ControllerSystem::tick(dt);
 	PhysicsSystem::tick(dt);
 	MoveSystem::tick(dt);
 	RenderSystem::tick(dt);
-
-
 }
 
 void TestState::draw()

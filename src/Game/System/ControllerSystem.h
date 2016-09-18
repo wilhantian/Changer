@@ -13,7 +13,8 @@
 
 class ControllerSystem : public System
 {
-    
+public:
+    static void tick(double fixedDelta);
 };
 
 #endif /* PlayerCtrlSystem_h */

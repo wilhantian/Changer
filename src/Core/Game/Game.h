@@ -3,7 +3,7 @@
 
 #include "Box2D/Box2D.h"
 
-struct ALLEGRO_DISPLAY;
+#include <allegro5/allegro.h>
 
 class Game
 {
@@ -23,6 +23,8 @@ public:
 protected:
 	bool _isNeedUpdate();
 
+    bool _initEventQueue();
+
 protected:
 	static Game* _instance;
 	float _nowTime;
@@ -31,6 +33,8 @@ protected:
 	float _lastUpdateTime;
 	bool  _isRunning;
     ALLEGRO_DISPLAY* _display;
+    ALLEGRO_EVENT_QUEUE* _eventQueue;
+    
 	b2World* _world;
 };
 

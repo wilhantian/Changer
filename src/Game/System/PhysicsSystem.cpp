@@ -15,7 +15,8 @@ void PhysicsSystem::tick(double fixedDelta)
 
 		if (!velocity.empty())
 		{
-			physics.body->ApplyLinearImpulseToCenter(b2Vec2(velocity.x, velocity.y), true);
+//			physics.body->ApplyLinearImpulseToCenter(b2Vec2(velocity.x, velocity.y), true);
+            physics.body->SetLinearVelocity(b2Vec2(velocity.x, velocity.y));
 		}
 	}
 
