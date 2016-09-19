@@ -9,31 +9,18 @@
 #include "TestState.h"
 #include <allegro5/allegro_primitives.h>
 #include "Box2D/Box2D.h"
-#include "rapidjson/document.h"
-
 #include "Core/Game/Game.h"
 #include "Core/Logger/Logger.h"
 #include "Core/Event/EventWh.h"
 
 #include "Game/Component/ComDefine.h"
-
-using namespace rapidjson;
+#include "Game/System/RenderSystem.h"
 
 TestState::TestState()
 {
-    const char* json = "{\"a\":123}";
-    
-    Document doc;
-    doc.Parse(json);
-    
-    if(doc.IsObject())
-    {
-        printf("is");
-    }
-    else
-    {
-        printf("no");
-    }
+	Eid e = Entity::create();
+	Entity::addComponent(e, new RenderCom(""));
+	Entity::addComponent(e, new MoveCom(1, kDirection::Down, Vector(200, 200)));
 }
 
 TestState::~TestState()
@@ -43,6 +30,7 @@ TestState::~TestState()
 
 void TestState::update(float dt)
 {
+	RenderSystem::tick(dt);
 }
 
 void TestState::draw()

@@ -10,8 +10,14 @@
 
 /// define component
 DEFINE_COM_BEGIN
+DEFINE_COM(MoveCom)
+DEFINE_COM(RenderCom)
+DEFINE_COM(CollectionCom)
 DEFINE_COM_END
 
 /// register component
 REGISTER_COM_BEGIN
+REGISTER_COM(MoveCom, move)
+REGISTER_COM(RenderCom, render)
+REGISTER_COM(CollectionCom, collection)
 REGISTER_COM_ENG
