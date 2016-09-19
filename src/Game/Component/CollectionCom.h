@@ -3,17 +3,20 @@
 
 #include "Core/ECS/EntityFu.h"
 #include "Core/Math/Size.h"
+#include "Core/Math/Vector.h"
 
 struct CollectionCom : Entity::Component
 {
 	CREATE_CID;
 
 	Size size;
+	Vector offset;
 	int filterCategory;
 	int filterMask;
 
-	CollectionCom(const Size& size, int filterCategory, int filterMask)
+	CollectionCom(const Size& size, const Vector& offset, int filterCategory, int filterMask)
 		: size(size)
+		, offset(offset)
 		, filterCategory(filterCategory)
 		, filterMask(filterMask){}
 

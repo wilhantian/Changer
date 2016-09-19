@@ -1,6 +1,8 @@
 #ifndef _COMMON_H_
 #define _COMMON_H_
 
+#define kCollectionDebug 1
+
 enum kDirection
 {
 	Up,
@@ -14,7 +16,5 @@ enum kDirection
 
 	LENGTH
 };
-
-
 
 #endif

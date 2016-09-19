@@ -14,13 +14,17 @@
 #include "Core/Event/EventWh.h"
 
 #include "Game/Component/ComDefine.h"
+#include "Game/System/InputSystem.h"
+#include "Game/System/MoveSystem.h"
 #include "Game/System/RenderSystem.h"
+#include "Game/System/CollectionSystem.h"
 
 TestState::TestState()
 {
 	Eid e = Entity::create();
 	Entity::addComponent(e, new RenderCom(""));
-	Entity::addComponent(e, new MoveCom(1, kDirection::Down, Vector(200, 200)));
+	Entity::addComponent(e, new MoveCom(130, kDirection::Down, Vector(200, 200)));
+	Entity::addComponent(e, new CollectionCom(Size(30, 14), Vector(5, 28), 1, 1));
 }
 
 TestState::~TestState()
@@ -30,6 +34,9 @@ TestState::~TestState()
 
 void TestState::update(float dt)
 {
+	InputSystem::tick(dt);
+	MoveSystem::tick(dt);
+	CollectionSystem::tick(dt);
 	RenderSystem::tick(dt);
 }
 
